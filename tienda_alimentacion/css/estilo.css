@@ -1,0 +1,559 @@
+/*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------CABECERA--------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+#img_logo{
+	width: 330px; 
+	height: 130px;
+}
+/*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------MENÚ------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+ul.menu{
+	list-style-type: none;			/*quitar puntos en los enlaces*/
+	overflow: hidden;
+	background-color: #758E4F; /*#333*/  /*F9A935*/
+	margin-top: 0;
+	height: 50px;
+}
+ul.menu li{						
+	float: right;					/*Menú a la derecha y en línea*/
+}
+ul.menu li a{
+	display: inline-block;
+	text-decoration: none;			/*quita la rayita de enlace*/
+	font-weight: bold;				/*en negrita*/
+	text-transform: uppercase;		/*convierte en mayusculas*/
+	color: white;					/*color de las letras*/
+	padding: 15px;					/*separación entre los enlaces*/
+	font-family: monospace;			/*tipo de letra*/
+	font-size: 20px;				/*tamaño de la letra*/
+}
+ul.menu li a:hover {				/*Cambios al pasar el ratón por encima*/
+	text-decoration: underline;
+	background-color: #5F7340;  /*111*/
+    color: white;
+}
+ul.menu li i{						/*Iconos del menú*/
+	margin-right: 6px;
+}
+/*-----------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------PIE-----------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+div.autora{
+	text-align: center;
+}
+div.redesSociales{
+	text-align: center;
+}
+div.redesSociales img{				/*Modifica las imágenes del pie de página*/
+	text-align:center;
+	text-decoration: none;
+	width: 20px; 
+	height: 20px;
+	margin-top: 10px;
+}
+div.informacion{					/*Modifica rectangulo gris*/
+	height: 180px;
+	background-color: #F9A935;
+	margin-top: 20px;				/*espacio por encima del pie de página*/
+	overflow: hidden;
+}
+div.informacion fieldset{			/*Cuadro ATENCION AL CLIENTE*/
+	width: 48%;
+	margin: 0;
+	border-style: none;
+	display: inline-block;
+}
+fieldset.sobreNosotros{
+	float: right;
+}
+div.informacion fieldset h1{		/*Modifica el enlace de atención al cliente*/
+	text-align:left;
+	text-decoration: none;
+	font-size: 30px;
+	color: #636940;			/*E6E042*/
+}
+div.informacion fieldset h2{
+	text-align:left;
+	width: 80%;
+	font-weight: lighter;
+	font-style: italic;				/*cursiva*/
+	font-size: 17px;
+	color: #636940;		/*F8F24A*/
+}	
+div.informacion fieldset a{
+	text-decoration: underline;
+	float: center;
+	color: #636940;			/*F8F24A*/
+}
+fieldset.atencionCliente img{		/*Modifica imagen de atencion al cliente*/
+	float:left;
+	width: 15%;
+	padding: 20px;
+}
+div.informacion fieldset a:hover{
+	font-size: 103%;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------INDEX----------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+.slider {
+	width: 95%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 20s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {	
+	/*position: relative;*/				/*posicion de la imagen*/	
+	width: 800px;							/*la imagen ocupa el 80% del ancho de la pantalla*/
+	margin-bottom: 50px;				/*margen de la img con el pie de pagina*/
+	/*align-content: center;*/
+	/*margin-left: 10%;*/
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*------------------------------------------ALTA USUARIO-----------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+ ul.datosUsuario div{				/*cada campo del formulario*/
+	padding: 10px;
+	list-style-type: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.5em;
+}
+
+#altaUsuario fieldset{
+	border-style: dashed;
+	width: 50%;
+	margin-left: 25%;
+}
+
+em{									/*Color del asterisco*/
+	color: red;
+}
+
+#altaUsuario p{
+	padding-left: 5px;
+}
+div.sexo input{
+	margin-right: 10px;
+	width: 17px;
+    height: 17px;
+}
+div.error{
+	color:red;
+	padding-left: 5px;
+	border: 2px solid red;
+}
+/*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------BOTONES---------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+input.registrarse, input.botonEntrar{
+    background-color: gray;			/*Color del fondo del boton*/
+    color: white;					/*Color de las letras*/
+    padding: 12px 20px;				/*alto por ancho*/
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;				/*esquinas redondeadas*/
+    cursor: pointer;
+}	
+input.registrarse:hover, input.botonEntrar:hover, input.cambiarPagina:hover {			/*Cuando está el ratón encima*/
+    background-color: #91989E;
+}
+
+
+input[type=text], input[type=email], input[type=password], input[type=date]{	/*modifica todas las cajas de inserción de datos*/
+	padding: 8px 14px;
+	border: 2px solid #B7B9BB;	
+	border-radius: 4px;
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, input[type=date]:focus {
+    background-color: #FDFAA6;
+}
+
+input.cambiarPagina {				/*boton de la paginación*/
+    background-color: gray;			/*Color del fondo del boton*/
+    color: white;					/*Color de las letras*/
+    padding: 8px 15px;				/*alto por ancho*/
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;				/*esquinas redondeadas*/
+    cursor: pointer;
+}
+
+
+input[type=number]{
+	border-radius: 4px;
+	height: 20px;
+	width: 60px; 
+}
+/*botones de editar y eliminar productos y ofertas*/
+#botones_fila{						
+	float: right;
+	margin-right: 20px;
+}
+#borrar{
+	border: 2px solid #E71717;		/*borde del botón de eliminar en rojo*/
+	background-color: white;		/*fondo blanco*/
+	border-radius: 4px;				/*esquinas redondeadas*/
+}
+#borrar:hover{
+	background-color: #E71717;
+	transition-duration: 0.4s;		/*lo que tarda en cambiar el botón cuando se pone el ratón encima*/
+	cursor: pointer;				/*forma del ratón al pulsarlo*/
+}
+#editar{
+	border: 2px solid #008CBA;		/*borde del botón de eliminar en azul*/
+	background-color: white;		/*fondo blanco*/
+	margin-right: 5px;
+	border-radius: 4px;				/*esquinas redondeadas*/
+}
+#editar:hover{
+	background-color: #008CBA;
+	transition-duration: 0.4s;
+	cursor: pointer;
+}
+#guardar{
+	border: 2px solid #49CC32;		/*borde del botón de eliminar en rojo*/
+	background-color: white;		/*fondo blanco*/
+	margin-right: 5px;
+	border-radius: 4px;				/*esquinas redondeadas*/
+}
+#guardar:hover{
+	background-color: #49CC32;
+	transition-duration: 0.4s;		/*lo que tarda en cambiar el botón cuando se pone el ratón encima*/
+	cursor: pointer;				/*forma del ratón al pulsarlo*/
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------LOGIN-----------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+#inicioSesion div{					/*Campos del inicio de sesión(usuario y contraseña)*/
+	padding: 10px;
+	list-style-type: none;
+	font-weight: bold;				/*en negrita*/
+	text-transform: uppercase;
+	line-height: 1.5em;
+}
+
+#inicioSesion fieldset{				/*Edita el cuadro entero*/
+	border-style: dashed; 			/*border del cuadrado de lineas discontinuas*/
+	width: 50%;						/*Ocupa el 50%*/
+	margin-left: 25%;				/*Deja un 25% a la izquierda*/
+	height: 500px;
+}
+
+#inicioSesion p{					/*Modifica la frase del asterisco*/
+	padding-left: 25px;	
+}
+
+div.entrar{
+	text-align:center;
+}
+div.noCuenta{
+	text-align:center;
+}
+div.noCuenta a{
+	color: #565550;
+	font-weight: bold;				/*en negrita*/
+}
+div.noCuenta a:hover{
+	color: #008B8B;
+	font-size: 103%;
+}
+/*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------ACCIÓN----------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+ul.accion_reg h1{
+	padding: 5px;
+	font-size: 220%;
+	color: #008B8B;
+}
+ul.accion_reg p{
+	padding: 5px;
+	padding-left: 10px;
+	font-size:120%;
+}
+
+ul.accion_reg a{
+	color: #565550;
+	font-weight: bold;				/*en negrita*/
+}
+ul.accion_reg a:hover{
+	color: #008B8B;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*---------------------------------------CONSULTA PRODUCTOS--------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+div.fila_prod{						/*estilo para cada fila del productos*/
+	padding-left: 5px;
+}
+
+#mostrandoPaginacion{
+	padding-left: 5px;				/*estilo de la linea de paginación*/
+	text-align:center;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.PrimeraLineaTablaProductos{		/*Tamaño de la tabla de NOMBRE, DESCRIPCION Y PRECIO*/
+	width: 90%;
+}
+.tablaProductos{					/*Tamaño de la tabla de los productos*/
+	width: 100%;
+}
+table img{							/*Botones de borrar y editar*//*Aquí se modifican también los botones de ofertas*/
+	width: 30px; 
+	height: 30px;
+}
+.PrimeraLineaTablaProductos td{		/*Celdas de la tabla de PRECIO, DESCRIPCION Y PRECIO*/
+	/*padding-left: 5%;*/
+	width: 40%;
+	font-size: 26px;
+	border-bottom: 2px solid #ddd;
+}
+.tablaProductos td{					/*Celdas de la tabla de los productos*/
+	width: 40%;
+	font-size: 18px;
+}
+
+#errorBorradoProd p{
+	color: red;
+	margin-left: 15px;
+	padding: 10px;
+	border: 2px solid red;
+}
+/*-----------------------------------------------------------------------------------------------------*/
+/*---------------------------------------CONSULTA OFERTAS----------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+.PrimeraLineaTablaOferta{					/*Tamaño de la tabla de NOMBRE, DESCRIPCION Y PRECIO*/
+	width: 90%;
+}
+.tablaOfertas{					/*Tamaño de la tabla de los productos*/
+	width: 100%;
+}
+table img{							/*Botones de borrar y editar*//*Aquí se modifican también los botones de ofertas*/
+	width: 30px; 
+	height: 30px;
+}
+.PrimeraLineaTablaOferta td{				/*Celdas de la tabla de PRECIO, DESCRIPCION Y PRECIO*/
+	/*padding-left: 5%;*/
+	width: 30%;
+	font-size: 26px;
+	border-bottom: 2px solid #ddd;
+}
+.tablaOfertas td{					/*Celdas de la tabla de los productos*/
+	width: 30%;
+	font-size: 18px;
+}
+/*-----------------------------------------------------------------------------------------------------*/
+/*---------------------------------------CUENTA USUARIO/EMPLEADO---------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+#datosMiCuenta ul{
+	list-style-type: none;			/*quitar puntos en los enlaces*/
+}
+#datosMiCuenta ul li{
+	font-size: 18px;
+	padding: 22px;
+	padding-left: 20%;
+}
+#datosMiCuenta ul li b{				/*Título de cada campo*/
+	font-size: 21px;
+	padding: 15px;
+	color: #474A2C;
+}
+#MiPerfilMiCuenta{					/*TÍTULO de MI PERFIL*/
+	font-size: 22px;
+	color: #474A2C;
+	text-align: center;				/*Centrar texto*/
+	background-color: #B0BC98;
+	padding: 5px;
+}
+#editarDatosMiCuenta{				/*Botón de editar*/
+	float: right;
+	margin-right: 3%;
+	margin-top: 3%;
+}
+#editar_sexo_usuario{
+	padding-left: 25%;
+	list-style-type: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	line-height: 1.5em;
+	color: #474A2C;
+}
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------EXCEPCIÓN-------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+#img_robot{
+	width: 170px; 
+	height: 170px;
+	padding-top: 30px;
+	padding-left: 50px;
+}
+
+div.text_except, div.excepcion{
+	padding-left: 15px;
+	width: 60%;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------ATENCION CLIENTE------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+div.datosContacto{
+	margin: 10px;
+	margin-top: 60px;
+	margin-left: 20px;
+}
+div.datosContacto p{
+	margin-left: 20px;
+}
+div.preguntasFrecuentes{			/*Conjunto de las preguntas y respuestas*/
+	margin-left: 20px;
+	margin-top: 10px;
+	width: 70%;
+}
+div.preguntasFrecuentes p{			/*Texto de las respuestas*/
+	margin-left: 30px;	
+}
+div.preguntasFrecuentes a{			/*Enlace a ofertas*/
+	text-decoration: none;
+	color: #27A079;
+}
+div.preguntasFrecuentes li{			/*Lista de los horarios*/
+	list-style-type: none;			/*quitar puntos en los enlaces*/
+	margin-left: 50px;
+}
+div.preguntasFrecuentes h3, div.preguntasFrecuentes h1{		/*Texto de las preguntas*/
+	color: #5EA33F;
+	margin-bottom: 10px;
+	margin-top: 50px
+}
+div.preguntasFrecuentes a:hover{
+	text-decoration: underline;
+}
+#fotoUbicacion{
+	width: 300px;
+	margin-left: 30%;
+	border: 2px solid #F00909;
+}
+/*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------ENLACES PAGINACION----------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+#enlaces a{
+	text-decoration: none;			/*quita la rayita de enlace*/
+	background-color: #D3BCBC;
+	color: #000000;
+	margin: 0;
+	padding: 10;
+}
+#enlaces a:hover{
+	background-color: #717070;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------RESPONSIVE------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width:700px) {		/*media-queries*/
+	ul.menu li{
+		float: none;
+		display: block;
+	}
+	ul.menu{
+		height: 100%;
+	}
+	header h1{
+		font-size: 30px;
+	}
+	
+	fieldset.atencionCliente img{
+		display: none;
+	}
+
+	#inicioSesion fieldset{	
+		width: 70%;
+		margin-left: 10%;
+	}
+	#inicioSesion div{
+		width: 40%;
+	}
+	#idCuentaAcceso, #idContraseñaAcceso{
+		width: 100%;
+	}
+
+	li.definirSexo label{
+		display: block;
+		position: relative;
+	}
+}
+
+@media screen and (max-width:800px) {			/*El alta usuario se va a modificar cuando sea un poco más grande que el resto de elementos de la página*/
+
+	#altaUsuario fieldset{
+		width: 65%;
+		margin-left: 0px;
+		padding-left:0px;
+		
+	}
+	#altaUsuario li{
+		width: 65%;
+		padding-left:0px;
+	}
+	#nombre, #apellidos, #dni, #calleAvenida, #fechaNacimiento, #email, #telefono, #direccion, #pass, #confirmarpass{
+		width: 100%;
+	}
+
+}
+@media screen and (max-width:1300px) {
+	div.informacion fieldset{
+		float: none;
+	}	
+	div.informacion fieldset h2{
+		overflow: hidden;
+	}
+	div.informacion{
+		height: 100%;
+	}
+}

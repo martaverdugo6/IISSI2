@@ -1,0 +1,46 @@
+<input id="OID_pro" name="OID_pro"
+							type="hidden" value="<?php echo $fila["OID_pro"]; ?>"/>
+						<input id="nombre_pro" name="nombre_pro"
+							type="hidden" value="<?php echo $fila["nombre_pro"]; ?>"/>
+						<input id="descripcion" name="descripcion"
+							type="hidden" value="<?php echo $fila["descripcion"]; ?>"/>
+						<input id="precio_pro" name="precio_pro"
+							type="hidden" value="<?php echo $fila["precio_pro"]; ?>"/>
+						<input id="categoria" name="categoria"
+							type="hidden" value="<?php echo $fila["categoria"]; ?>"/>
+					<?php
+						if (isset($producto) and ($producto["OID_pro"] == $fila["OID_pro"])) { ?>
+							<!-- Editando título -->
+							<h3><input id="nombre_pro" name="nombre_pro" type="text" value="<?php echo $fila["nombre_pro"]; ?>"/>	</h3>
+							<h4><?php echo $fila["descripcion"]." ".$fila["precio_pro"]; ?></h4>
+					<?php }	else { ?>
+							<!-- mostrando título -->
+							<input id="nombre_pro" name="nombre_pro" type="hidden" value="<?php echo $fila["nombre_pro"]; ?>"/>
+							<div class="nombre_pro"><?php echo $fila["nombre_pro"]; ?></div>
+							<div class="descripcion"><?php echo $fila["descripcion"]; ?></div>
+							<div class="precio_pro"><?php echo $fila["precio_pro"]; ?></div>
+					<?php } ?>
+
+
+
+
+<article class="productos">
+			<form method="post" action="controlador_producto.php">
+				<div class="fila_prod">
+					<div class="datos_productos">		
+						<div class="nombre_pro"><?php echo $fila["nombre_pro"]; ?></div>
+						<div class="descripcion"><?php echo $fila["descripcion"]; ?></div>
+						<div class="precio_pro"><?php echo $fila["precio_pro"]; ?></div>
+					</div>
+					<div id="botones_fila">
+						<button id="editar" name="editar" type="submit" class="editar_fila">
+							<img src="img/editar.png" class="editar_fila" alt="Editar producto">
+						</button>
+						
+						<button id="borrar" name="borrar" type="submit" class="editar_fila">
+							<img src="img/eliminar.png" class="editar_fila" alt="Borrar producto">
+						</button>
+					</div>
+				</div>
+			</form>
+		</article>
