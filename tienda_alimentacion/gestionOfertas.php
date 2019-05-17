@@ -24,9 +24,9 @@ function eliminar_oferta($conexion,$OID_ofe) {
 
 function modificar_descuento($conexion, $OID_oferta, $descuento){
 	try {
-		$stmt=$conexion->prepare('CALL MODIFICAR_PRECIO_PRO(:OID_oferta, :descuento)');
-		$stmt -> bindParam(':OID_producto', $OID_oferta);
-		$stmt -> bindParam(':precio_pro', $descuento);
+		$stmt=$conexion->prepare('CALL MODIFICAR_DESCUENTO_OFE(:OID_oferta, :descuento)');
+		$stmt -> bindParam(':OID_oferta', $OID_oferta);
+		$stmt -> bindParam(':descuento', $descuento);
 		$stmt->execute();
 		return "";
 	} catch(PDOException $e) {

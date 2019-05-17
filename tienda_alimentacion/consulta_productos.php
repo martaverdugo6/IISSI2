@@ -140,7 +140,7 @@
 						
 						<td><div class="descripcion"><i><?php echo $fila["DESCRIPCION"]; ?></i></div></td>
 						
-						<td><input class="precio_pro" name="precio_pro" type="text" value="<?php echo $fila["PRECIO_PRO"]; ?>"/>€</td>
+						<td><input class="PRECIO_PRO" name="PRECIO_PRO" type="text" value="<?php echo $fila["PRECIO_PRO"]; ?>"/>€</td>
 					
 					<?php }	else { ?>
 						<!-- mostrando precio-->

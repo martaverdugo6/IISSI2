@@ -108,7 +108,7 @@
 						<!--Editando descuento-->
 
 						<td><div class="nombrePro"><?php echo $nombreProducto["NOMBRE_PRO"]; ?></div></td>
-						<td><input class="descuento" name="descuento" type="text" value="<?php echo $fila["DESCUENTO"]; ?>"/>%</td>
+						<td><input class="DESCUENTO" name="DESCUENTO" type="text" value="<?php echo $fila["DESCUENTO"]; ?>"/>%</td>
 						<td><div class="fechaInicio"><?php echo $fila["FECHA_INICIO"]; ?></div></td>
 						<td><div class="fechaFin"><?php echo $fila["FECHA_FIN"]; ?></div>
 

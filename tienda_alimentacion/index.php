@@ -18,13 +18,8 @@
 	include_once("menu.php");
 ?>
 <main>
-	<div class="slider">
-		<ul>
-			<li ><img src="img/alimentos.jpg" /></li>
-			<li ><img src="img/cajeras.jpg"></li>
-			<li ><img src="img/carrito.jpg"></li>
-
-		</ul>	
+	<div class="imagenIndex">
+		<img src="img/alimentos.jpg" />	
 	</div>
 </main>	
 <?php

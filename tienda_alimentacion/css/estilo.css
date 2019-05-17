@@ -98,47 +98,13 @@ div.informacion fieldset a:hover{
 /*-----------------------------------------------------------------------------------------------------*/
 /*--------------------------------------------INDEX----------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
-.slider {
-	width: 95%;
-	margin: auto;
-	overflow: hidden;
-}
-
-.slider ul {
-	display: flex;
-	padding: 0;
-	width: 400%;
-	
-	animation: cambio 20s infinite alternate linear;
-}
-
-.slider li {
-	width: 100%;
-	list-style: none;
-}
-
-.slider img {	
+.imagenIndex img {	
 	/*position: relative;*/				/*posicion de la imagen*/	
-	width: 800px;							/*la imagen ocupa el 80% del ancho de la pantalla*/
+	width: 80%;							/*la imagen ocupa el 80% del ancho de la pantalla*/
 	margin-bottom: 50px;				/*margen de la img con el pie de pagina*/
 	/*align-content: center;*/
-	/*margin-left: 10%;*/
+	margin-left: 10%;
 }
-
-@keyframes cambio {
-	0% {margin-left: 0;}
-	20% {margin-left: 0;}
-	
-	25% {margin-left: -100%;}
-	45% {margin-left: -100%;}
-	
-	50% {margin-left: -200%;}
-	70% {margin-left: -200%;}
-	
-	75% {margin-left: -300%;}
-	100% {margin-left: -300%;}
-}
-
 
 
 /*-----------------------------------------------------------------------------------------------------*/

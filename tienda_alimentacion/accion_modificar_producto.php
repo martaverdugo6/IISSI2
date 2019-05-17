@@ -4,7 +4,7 @@
 	if (isset($_SESSION["producto"])) {
 		$producto = $_SESSION["producto"];
 		unset($_SESSION["producto"]);
-		
+
 		require_once("gestionBD.php");
 		require_once("gestionProductos.php");
 		

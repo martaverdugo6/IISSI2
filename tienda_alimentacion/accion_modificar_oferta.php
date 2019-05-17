@@ -4,7 +4,7 @@
 	if (isset($_SESSION["oferta"])) {
 		$oferta = $_SESSION["oferta"];
 		unset($_SESSION["oferta"]);
-		
+
 		require_once("gestionBD.php");
 		require_once("gestionOfertas.php");
 		
