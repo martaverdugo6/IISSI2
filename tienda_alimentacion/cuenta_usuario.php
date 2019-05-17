@@ -56,7 +56,7 @@
 	
 		<div id="datosMiCuenta">
 			<input id="OID_CLI" name="OID_CLI" type="hidden" value="$datosUsuario['OID_CLI']"/>
-			<?php if(isset($_SESSION['empleado'])){ ?>
+			<?php if(isset($_SESSION['usuario'])){ ?>
 			<ul>
 			<!--EDITANDO DATOS USUARIOS-->	
 				<li><b>Nombre: </b><input id="NOMBRE_CLI" name="NOMBRE_CLI" type="text" value="<?php echo $datosUsuario['NOMBRE_CLI']; ?>"/></li>
