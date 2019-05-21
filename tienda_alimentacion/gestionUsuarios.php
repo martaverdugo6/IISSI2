@@ -73,19 +73,19 @@ function datosEmpleado($conexion, $email){
 }
 	
 function modificar_usuarios($conexion,$usuario) {
-	$fechaNacimiento = date('d/m/y', strtotime($usuario['fechaNacimiento']));
+	//$fechaNacimiento = date('d/m/y', strtotime($usuario['fechaNacimiento']));
 	try {
 		$stmt=$conexion->prepare('CALL MODIFICAR_CLIENTE(:nom, :ape, :dni, :fec, :ema, :sex, :tel, :dir, :pass, :oid)');
-		$stmt -> bindParam(':nom', $usuario['nombre']);		//Lo que va detras de los dos puntos debe
-																//tener siempre el mismo nombre
-		$stmt -> bindParam(':ape', $usuario['apellidos']);
-		$stmt -> bindParam(':dni', $usuario['dni']);
+		$stmt -> bindParam(':nom', $usuario['NOMBRE_CLI']);		//Lo que va detras de los dos puntos debe tener siempre el mismo nombre
+		$stmt -> bindParam(':ape', $usuario['APELLIDOS_CLI']);
+		$stmt -> bindParam(':dni', $usuario['DNI_CLI']);
 		$stmt -> bindParam(':fec', $fechaNacimiento);
-		$stmt -> bindParam(':ema', $usuario['email']);
-		$stmt -> bindParam(':sex', $usuario['sexo']);
-		$stmt -> bindParam(':tel', $usuario['telefono']);
-		$stmt -> bindParam(':dir', $usuario['direccion']);
-		$stmt -> bindParam(':pass', $usuario['pass']);
+		$stmt -> bindParam(':ema', $usuario['EMAIL_CLI']);
+		$stmt -> bindParam(':sex', $usuario['SEXO_CLI']);
+		$stmt -> bindParam(':tel', $usuario['TELEFONO_CLI']);
+		$stmt -> bindParam(':dir', $usuario['DIRECCION_CLI']);
+		$stmt -> bindParam(':pass', $usuario['PASS_CLI']);
+		$stmt -> bindParam(':oid', $usuario['OID_CLI']);
 		$stmt->execute();
 		return "";
 	} catch(PDOException $e) {
@@ -94,11 +94,10 @@ function modificar_usuarios($conexion,$usuario) {
 }
 
 function modificar_empleados($conexion,$usuario) {
-	$fechaNacimiento = date('d/m/y', strtotime($usuario['fechaNacimiento']));
+	//$fechaNacimiento = date('d/m/y', strtotime($usuario['fechaNacimiento']));
 	try {
 		$stmt=$conexion->prepare('CALL MODIFICAR_EMPLEADO(:nom, :ape, :dni, :fec, :sal, :ema, :tel, :pass, :oid)');
-		$stmt -> bindParam(':nom', $usuario['nombre']);		//Lo que va detras de los dos puntos debe
-																//tener siempre el mismo nombre
+		$stmt -> bindParam(':nom', $usuario['nombre']);		//Lo que va detras de los dos puntos debe tener siempre el mismo nombre
 		$stmt -> bindParam(':ape', $usuario['apellidos']);
 		$stmt -> bindParam(':dni', $usuario['dni']);
 		$stmt -> bindParam(':fec', $fechaNacimiento);

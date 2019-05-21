@@ -383,7 +383,11 @@ table img{							/*Botones de borrar y editar*//*Aquí se modifican también los
 	color: #474A2C;
 }
 
-
+#editar_sexo_usuario label{
+	display: block;
+	position: relative;
+	padding: 1%;
+}
 
 
 
@@ -489,7 +493,7 @@ div.preguntasFrecuentes a:hover{
 		width: 100%;
 	}
 
-	li.definirSexo label{
+	div.sexo label{
 		display: block;
 		position: relative;
 	}
@@ -507,7 +511,7 @@ div.preguntasFrecuentes a:hover{
 		width: 65%;
 		padding-left:0px;
 	}
-	#nombre, #apellidos, #dni, #calleAvenida, #fechaNacimiento, #email, #telefono, #direccion, #pass, #confirmarpass{
+	#nombre, #apellidos, #dni, #fechaNacimiento, #email, #telefono, #direccion, #pass, #confirmarpass{
 		width: 100%;
 	}
 

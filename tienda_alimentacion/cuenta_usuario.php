@@ -65,9 +65,9 @@
 				<li><b>E-mail: </b><input id="EMAIL_CLI" name="EMAIL_CLI" type="text" value="<?php echo $datosUsuario['EMAIL_CLI']; ?>"/></li>
 				<li><b>Sexo: </b></li>
 				<div id="editar_sexo_usuario">
-					<input name="SEXO_CLI" type="radio" value="Femenino" <?php if($datosUsuario['SEXO_CLI']=='Femenino') echo ' checked ';?>/>Femenino
-					<input name="SEXO_CLI" type="radio" value="Masculino" <?php if($datosUsuario['SEXO_CLI']=='Masculino') echo ' checked ';?>/>Masculino
-					<input name="SEXO_CLI" type="radio" value="Sin especificar" <?php if($datosUsuario['SEXO_CLI']=='Sin especificar') echo ' checked ';?>/>Sin especificar
+					<label><input name="SEXO_CLI" type="radio" value="Femenino" <?php if($datosUsuario['SEXO_CLI']=='Femenino') echo ' checked ';?>/>Femenino</label>
+					<label><input name="SEXO_CLI" type="radio" value="Masculino" <?php if($datosUsuario['SEXO_CLI']=='Masculino') echo ' checked ';?>/>Masculino</label>
+					<label><input name="SEXO_CLI" type="radio" value="Sin especificar" <?php if($datosUsuario['SEXO_CLI']=='Sin especificar') echo ' checked ';?>/>Sin especificar</label>
 				</div>
 				<li><b>Fecha de Nacimiento: </b><input id="FECHA_NACIMIENTO_CLI" name="FECHA_NACIMIENTO_CLI" type="text" value="<?php echo getFechaFormateada($datosUsuario['FECHA_NACIMIENTO_CLI']); ?>"/></li>
 				<li><b>Teléfono: </b><input id="TELEFONO_CLI" name="TELEFONO_CLI" type="text" value="<?php echo $datosUsuario['TELEFONO_CLI']; ?>"/></li>

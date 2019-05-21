@@ -110,7 +110,7 @@
 					</div>
 
 				</ul>
-				<input class="registrarse" type="submit" value="Enviar" />
+				<input class="registrarse" type="submit" name="submit" value="Enviar" />
 
 			</fieldset>
 

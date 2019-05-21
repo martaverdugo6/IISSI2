@@ -20,9 +20,9 @@ CREATE TABLE PRODUCTO(
 CREATE TABLE CLIENTE(
   nombre_cli varchar2(50) NOT NULL, 
   apellidos_cli varchar2(50) NOT NULL,
-  dni_cli varchar2(9) NOT NULL,
+  dni_cli varchar2(9) NOT NULL UNIQUE,
   fecha_nacimiento_cli DATE,
-  email_cli varchar2(50) NOT NULL,
+  email_cli varchar2(50) NOT NULL UNIQUE,
   sexo_cli varchar2(50) CHECK (sexo_cli IN ('Femenino','Masculino','Sin especificar')),
   telefono_cli varchar2(50),
   direccion_cli varchar2(200),

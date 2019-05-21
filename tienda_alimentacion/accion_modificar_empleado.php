@@ -9,6 +9,7 @@
 
 		$conexion = crearConexionBD();		
 		$excepcion = modificar_empleados($conexion,$datos);
+
 		cerrarConexionBD($conexion);
 			
 		if ($excepcion<>"") {

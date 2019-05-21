@@ -39,7 +39,6 @@
 	<main>
 		<ul class=accion_reg>
 			<?php if(alta_usuario($conexion, $nuevoUsuario)){	// AQUÍ SE INVOCA A LA FUNCIÓN DE ALTA DE USUARIO
-			$_SESSION['login'] = $nuevoUsuario['email'];
 							
 				// EN EL CONTEXTO DE UNA SENTENCIA IF
 			?>
