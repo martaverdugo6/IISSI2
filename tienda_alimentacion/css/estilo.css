@@ -369,12 +369,17 @@ table img{							/*Botones de borrar y editar*//*Aquí se modifican también los
 	background-color: #B0BC98;
 	padding: 5px;
 }
-#editarDatosMiCuenta{				/*Botón de editar*/
+#editarDatosMiCuenta{				/*Botón de editar y cancelar*/
 	float: right;
 	margin-right: 3%;
 	margin-top: 3%;
 }
-#editar_sexo_usuario{
+#editarDatosMiCuenta button{
+	color:red;
+
+
+}
+#editar_sexo_usuario{				
 	padding-left: 25%;
 	list-style-type: none;
 	font-weight: bold;

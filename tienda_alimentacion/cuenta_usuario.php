@@ -47,6 +47,7 @@
 				<button id="editarDatosMiCuenta" name="guardar" type="submit" class="guardar_datos">
 					Guardar datos
 				</button>
+				<button id="editarDatosMiCuenta" name="cancelar" type="submit">Cancelar</button>
 			<?php }else{ ?>
 				<button id="editarDatosMiCuenta" name="editar" type="submit" class="editar_datos">
 					Editar datos personales
@@ -55,7 +56,7 @@
 		</div>
 	
 		<div id="datosMiCuenta">
-			<input id="OID_CLI" name="OID_CLI" type="hidden" value="$datosUsuario['OID_CLI']"/>
+			<input id="OID_CLI" name="OID_CLI" type="hidden" value="<?php echo $datosUsuario['OID_CLI']; ?> "/>
 			<?php if(isset($_SESSION['usuario'])){ ?>
 			<ul>
 			<!--EDITANDO DATOS USUARIOS-->	
@@ -69,7 +70,7 @@
 					<label><input name="SEXO_CLI" type="radio" value="Masculino" <?php if($datosUsuario['SEXO_CLI']=='Masculino') echo ' checked ';?>/>Masculino</label>
 					<label><input name="SEXO_CLI" type="radio" value="Sin especificar" <?php if($datosUsuario['SEXO_CLI']=='Sin especificar') echo ' checked ';?>/>Sin especificar</label>
 				</div>
-				<li><b>Fecha de Nacimiento: </b><input id="FECHA_NACIMIENTO_CLI" name="FECHA_NACIMIENTO_CLI" type="text" value="<?php echo getFechaFormateada($datosUsuario['FECHA_NACIMIENTO_CLI']); ?>"/></li>
+				<li><b>Fecha de Nacimiento: </b><input id="FECHA_NACIMIENTO_CLI" name="FECHA_NACIMIENTO_CLI" type="date" value="<?php echo getFechaFormateada($datosUsuario['FECHA_NACIMIENTO_CLI']); ?>"/></li>
 				<li><b>Teléfono: </b><input id="TELEFONO_CLI" name="TELEFONO_CLI" type="text" value="<?php echo $datosUsuario['TELEFONO_CLI']; ?>"/></li>
 				<li><b>Contraseña: </b><input id="PASS_CLI" name="PASS_CLI" type="password" value="<?php echo $datosUsuario['PASS_CLI']; ?>"/></li>
 				<li><b>Confirmar contraseña: </b><input id="CONF_PASS_EMP" name="CONF_PASS_CLI" type="password" value="<?php echo $datosUsuario['PASS_CLI']; ?>"/></li>

@@ -82,7 +82,7 @@ function datosEmpleado($conexion, $email){
 }
 	
 function modificar_usuarios($conexion,$usuario) {
-	//$fechaNacimiento = date('d/m/y', strtotime($usuario['fechaNacimiento']));
+	$fechaNacimiento = date('d/m/y', strtotime($usuario['fechaNacimiento']));
 	try {
 		$stmt=$conexion->prepare('CALL MODIFICAR_CLIENTE(:nom, :ape, :dni, :fec, :ema, :sex, :tel, :dir, :pass, :oid)');
 		$stmt -> bindParam(':nom', $usuario['NOMBRE_CLI']);		//Lo que va detras de los dos puntos debe tener siempre el mismo nombre
