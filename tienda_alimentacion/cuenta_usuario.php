@@ -11,7 +11,6 @@
 		Header("Location: login.php");			// EN OTRO CASO HAY QUE DERIVAR AL FORMULARIO
 	}
 
-
 	function getFechaFormateada($fecha){
 		$fechaNacimiento = date('d/m/Y', strtotime($fecha));
 		return $fechaNacimiento;
@@ -72,6 +71,7 @@
 				</div>
 				<li><b>Fecha de Nacimiento: </b><input id="FECHA_NACIMIENTO_CLI" name="FECHA_NACIMIENTO_CLI" type="date" value="<?php echo getFechaFormateada($datosUsuario['FECHA_NACIMIENTO_CLI']); ?>"/></li>
 				<li><b>Teléfono: </b><input id="TELEFONO_CLI" name="TELEFONO_CLI" type="text" value="<?php echo $datosUsuario['TELEFONO_CLI']; ?>"/></li>
+				<li><b>Dirección: </b><input id="DIRECCION_CLI" name="DIRECCION_CLI" type="text" value="<?php echo $datosUsuario['DIRECCION_CLI']; ?>"/></li>
 				<li><b>Contraseña: </b><input id="PASS_CLI" name="PASS_CLI" type="password" value="<?php echo $datosUsuario['PASS_CLI']; ?>"/></li>
 				<li><b>Confirmar contraseña: </b><input id="CONF_PASS_EMP" name="CONF_PASS_CLI" type="password" value="<?php echo $datosUsuario['PASS_CLI']; ?>"/></li>
 			</ul>
