@@ -10,6 +10,7 @@
 		$_SESSION["formulario"] = null;
 		$_SESSION["errores"] = null;
 	
+
 	}else{
 		Header("Location: alta_usuario.php");	// EN OTRO CASO HAY QUE DERIVAR AL FORMULARIO
 	}
@@ -38,9 +39,8 @@
 
 	<main>
 		<ul class=accion_reg>
-			<?php if(alta_usuario($conexion, $nuevoUsuario)){	// AQUÍ SE INVOCA A LA FUNCIÓN DE ALTA DE USUARIO
-							
-				// EN EL CONTEXTO DE UNA SENTENCIA IF
+			<?php if(usuarioRegistrado($conexion,$nuevoUsuario['email']) == 0){	//Si no hay nadie registrado con este email, entramos en el if
+				alta_usuario($conexion, $nuevoUsuario);	//Al no haber nadie con ese email, lo registramo
 			?>
 				<h1>Bienvenido/a <?php echo $nuevoUsuario['nombre']; ?>, gracias por registrarse</h1>		<!-- MENSAJE DE BIENVENIDO AL USUARIO -->
 				<div>

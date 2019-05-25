@@ -7,8 +7,8 @@ DROP TABLE PRODUCTO;
 
 
 CREATE TABLE PRODUCTO(
-  nombre_pro varchar2(50) NOT NULL,
-  descripcion varchar2(50),
+  nombre_pro varchar2(200) NOT NULL,
+  descripcion varchar2(200),
   stock integer CHECK (stock > 19) NOT NULL,
   precio_pro number(5,2) NOT NULL,
   categoria varchar2(20) CHECK (categoria IN ('bebida','alcohol','congelado','confiteria','golosina')) NOT NULL,

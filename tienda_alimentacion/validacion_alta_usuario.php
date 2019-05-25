@@ -63,7 +63,7 @@
 		}else if(!preg_match("/^[0-9]{8}[A-Z]$/", $nuevoUsuario["dni"])){
 		$errores[] = "<p>El DNI debe contener 8 números y una letra mayúscula: " . $nuevoUsuario["dni"]. "</p>";
 		}
-
+		
 		// Validación del email
 		if($nuevoUsuario['email'] == ""){
 			$errores[] = "<p>El campo EMAIL debe ser rellenado</p>";

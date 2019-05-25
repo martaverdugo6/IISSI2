@@ -145,18 +145,25 @@ VALUES ('Berlinas de azucar al horno', 'Paquete 4 uds - 220 gr', 50, 1.20, 'conf
 
 COMMIT;
 
+
 INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
-VALUES (10, to_date('01/08/18','DD/MM/RR'),to_date('01/09/18','DD/MM/RR'), 19, 1);
+VALUES (10, to_date('01/06/19','DD/MM/RR'),to_date('01/07/19','DD/MM/RR'), 2, 1);
 INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
-VALUES (25, to_date('01/08/18','DD/MM/RR'),to_date('01/09/18','DD/MM/RR'), 36, 2);
+VALUES (10, to_date('01/08/19','DD/MM/RR'),to_date('01/09/19','DD/MM/RR'), 19, 2);
 INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
-VALUES (20, to_date('01/08/18','DD/MM/RR'),to_date('15/09/18','DD/MM/RR'), 45, 3);
+VALUES (25, to_date('01/08/19','DD/MM/RR'),to_date('01/09/19','DD/MM/RR'), 36, 3);
 INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
-VALUES (15, to_date('01/08/18','DD/MM/RR'),to_date('15/09/18','DD/MM/RR'), 52, 4);
+VALUES (20, to_date('01/08/19','DD/MM/RR'),to_date('15/09/19','DD/MM/RR'), 45, 4);
 INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
-VALUES (10, to_date('01/09/18','DD/MM/RR'),to_date('01/10/18','DD/MM/RR'), 67, 5);
+VALUES (15, to_date('01/08/19','DD/MM/RR'),to_date('15/09/19','DD/MM/RR'), 52, 5);
 INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
-VALUES (50, to_date('01/09/18','DD/MM/RR'),to_date('01/10/18','DD/MM/RR'), 71, 6);
+VALUES (10, to_date('01/09/19','DD/MM/RR'),to_date('01/10/19','DD/MM/RR'), 67, 6);
+INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
+VALUES (50, to_date('01/09/19','DD/MM/RR'),to_date('01/10/19','DD/MM/RR'), 71, 7);
+INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
+VALUES (50, to_date('01/10/19','DD/MM/RR'),to_date('01/12/19','DD/MM/RR'), 10, 8);
+INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
+VALUES (50, to_date('01/10/19','DD/MM/RR'),to_date('01/12/19','DD/MM/RR'), 11, 9);
 
 COMMIT;
 
@@ -169,9 +176,9 @@ VALUES('Alejandro','Martín Rubio','42122365Z', to_date('25/11/93','DD/MM/RR'), 1
 
 COMMIT;
 
-EXECUTE INSERTAR_CLIENTE('Teresa','Sánchez Medina','21254456V', to_date('08/10/91','DD/MM/RR'), 'teresa@tienda.com', 'Femenino','955825111', 'calle Roja','123456aA');
-EXECUTE INSERTAR_CLIENTE('Pepe','Perez Oliva','21254412V', to_date('18/12/89','DD/MM/RR'), 'pepe@tienda.com', 'Femenino','955825111', 'calle Roja','123456aA');
-EXECUTE INSERTAR_CLIENTE('Enrique','Pérez Torres','78777546G', to_date('21/04/75','DD/MM/RR'), 'enrique@tienda.com', 'Masculino','955818526', 'calle Verde','123456aA');
-EXECUTE INSERTAR_CLIENTE('Luís','Vega Díaz','15486345R', to_date('11/05/87','DD/MM/RR'), 'luis@tienda.com', 'Masculino', '954589576', 'calle Azul', '123456aA');
+EXECUTE INSERTAR_CLIENTE('Teresa','Sánchez Medina','21254456V', to_date('08/10/91','DD/MM/RR'), 'teresa@us.es', 'Femenino','955825111', 'calle Roja','123456aA');
+EXECUTE INSERTAR_CLIENTE('Pepe','Perez Oliva','21254412V', to_date('18/12/89','DD/MM/RR'), 'pepe@us.es', 'Femenino','955825111', 'calle Roja','123456aA');
+EXECUTE INSERTAR_CLIENTE('Enrique','Pérez Torres','78777546G', to_date('21/04/75','DD/MM/RR'), 'enrique@us.es', 'Masculino','955818526', 'calle Verde','123456aA');
+EXECUTE INSERTAR_CLIENTE('Luís','Vega Díaz','15486345R', to_date('11/05/87','DD/MM/RR'), 'luis@us.es', 'Masculino', '954589576', 'calle Azul', '123456aA');
 
 COMMIT;
