@@ -55,6 +55,3 @@
 		</ul>
 </body>
 </html>
-<?php
-	cerrarConexionBD($conexion);			// DESCONECTAR LA BASE DE DATOS
-?>

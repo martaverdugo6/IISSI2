@@ -1,8 +1,8 @@
 <?php	
 	session_start();	
 	
-	if (isset($_SESSION["usuario"])) {
-		$datos = $_SESSION["usuario"];
+	if (isset($_SESSION["datosUsuario"])) {
+		$datos = $_SESSION["datosUsuario"];
 
 		require_once("gestionBD.php");
 		require_once("gestionUsuarios.php");

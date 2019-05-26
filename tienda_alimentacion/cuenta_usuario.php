@@ -42,7 +42,7 @@
 	<form method="post" action="controlador_usuario.php">
 
 		<div>
-			<?php if(isset($_SESSION['usuario'])){ ?>
+			<?php if(isset($_SESSION['estoyEditando'])){ ?>
 				<button id="editarDatosMiCuenta" name="guardar" type="submit" class="guardar_datos">
 					Guardar datos
 				</button>
@@ -56,7 +56,7 @@
 	
 		<div id="datosMiCuenta">
 			<input id="OID_CLI" name="OID_CLI" type="hidden" value="<?php echo $datosUsuario['OID_CLI']; ?> "/>
-			<?php if(isset($_SESSION['usuario'])){ ?>
+			<?php if(isset($_SESSION['estoyEditando'])){ ?>
 			<ul>
 			<!--EDITANDO DATOS USUARIOS-->	
 				<li><b>Nombre: </b><input id="NOMBRE_CLI" name="NOMBRE_CLI" type="text" value="<?php echo $datosUsuario['NOMBRE_CLI']; ?>"/></li>

@@ -43,4 +43,23 @@ function modificar_precio($conexion, $OID_producto, $precio_pro){
     }
 }
 
+function crear_producto($conexion, $producto){	
+	try{
+		$consulta = "CALL INSERTAR_PRODUCTO(:nom, :des, :stock, :pre, :cat)";
+		$stmt = $conexion -> prepare($consulta);
+		$stmt -> bindParam(':nom', $usuario['nombre']);		//Lo que va detras de los dos puntos debe
+															//tener siempre el mismo nombre
+		$stmt -> bindParam(':des', $usuario['apellidos']);
+		$stmt -> bindParam(':stock', $usuario['dni']);
+		$stmt -> bindParam(':pre', $usuario['email']);
+		$stmt -> bindParam(':cat', $usuario['sexo']);
+		$stmt -> execute();
+		return true;
+	}catch(PDOException $oops){
+		//TODO //Solo para depurar, después quitar
+		//echo $oops -> getMessage();
+		return false;
+	}
+}
+
 ?>
