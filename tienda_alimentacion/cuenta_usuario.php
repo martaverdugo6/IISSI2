@@ -11,6 +11,12 @@
 		Header("Location: login.php");			// EN OTRO CASO HAY QUE DERIVAR AL FORMULARIO
 	}
 
+	if(isset($_SESSION["usuario_mod"])){
+		unset($datosUsuario);
+		$datosUsuario = $_SESSION["usuario_mod"];
+		unset($_SESSION["usuario_mod"]);
+	}
+
 	function getFechaFormateada($fecha){
 		$fechaNacimiento = date('d/m/Y', strtotime($fecha));
 		return $fechaNacimiento;
@@ -56,15 +62,25 @@
 	
 		<div id="datosMiCuenta">
 			<input id="OID_CLI" name="OID_CLI" type="hidden" value="<?php echo $datosUsuario['OID_CLI']; ?> "/>
+			<input id="NOMBRE_CLI" name="NOMBRE_CLI" type="hidden" value="<?php echo $datosUsuario['NOMBRE_CLI']; ?> "/>
+			<input id="APELLIDOS_CLI" name="APELLIDOS_CLI" type="hidden" value="<?php echo $datosUsuario['APELLIDOS_CLI']; ?> "/>
+			<input id="DNI_CLI" name="DNI_CLI" type="hidden" value="<?php echo $datosUsuario['DNI_CLI']; ?> "/>
+			<input id="EMAIL_CLI" name="EMAIL_CLI" type="hidden" value="<?php echo $datosUsuario['EMAIL_CLI']; ?> "/>
+			<input id="SEXO_CLI" name="SEXO_CLI" type="hidden" value="<?php echo $datosUsuario['SEXO_CLI']; ?> "/>
+			<input id="FECHA_NACIMIENTO_CLI" name="FECHA_NACIMIENTO_CLI" type="hidden" value="<?php echo getFechaFormateada($datosUsuario['FECHA_NACIMIENTO_CLI']); ?> "/>
+			<input id="TELEFONO_CLI" name="TELEFONO_CLI" type="hidden" value="<?php echo $datosUsuario['TELEFONO_CLI']; ?> "/>
+			<input id="DIRECCION_CLI" name="DIRECCION_CLI" type="hidden" value="<?php echo $datosUsuario['DIRECCION_CLI']; ?> "/>
+			<input id="PASS_CLI" name="PASS_CLI" type="hidden" value="<?php echo $datosUsuario['PASS_CLI']; ?> "/>
 			<?php if(isset($_SESSION['estoyEditando'])){ ?>
 			<ul>
 			<!--EDITANDO DATOS USUARIOS-->	
 				<li><b>Nombre: </b><input id="NOMBRE_CLI" name="NOMBRE_CLI" type="text" value="<?php echo $datosUsuario['NOMBRE_CLI']; ?>"/></li>
 				<li><b>Apellidos: </b><input id="APELLIDOS_CLI" name="APELLIDOS_CLI" type="text" value="<?php echo $datosUsuario['APELLIDOS_CLI']; ?>"/></li>
 				<li><b>DNI: </b><input id="DNI_CLI" name="DNI_CLI" type="text" value="<?php echo $datosUsuario['DNI_CLI']; ?>"/></li>
-				<li><b>E-mail: </b><input id="EMAIL_CLI" name="EMAIL_CLI" type="text" value="<?php echo $datosUsuario['EMAIL_CLI']; ?>"/></li>
+				<li><b>E-mail: </b><?php echo $datosUsuario['EMAIL_CLI']; ?></li>
 				<li><b>Sexo: </b></li>
 				<div id="editar_sexo_usuario">
+					
 					<label><input name="SEXO_CLI" type="radio" value="Femenino" <?php if($datosUsuario['SEXO_CLI']=='Femenino') echo ' checked ';?>/>Femenino</label>
 					<label><input name="SEXO_CLI" type="radio" value="Masculino" <?php if($datosUsuario['SEXO_CLI']=='Masculino') echo ' checked ';?>/>Masculino</label>
 					<label><input name="SEXO_CLI" type="radio" value="Sin especificar" <?php if($datosUsuario['SEXO_CLI']=='Sin especificar') echo ' checked ';?>/>Sin especificar</label>
@@ -73,7 +89,7 @@
 				<li><b>Teléfono: </b><input id="TELEFONO_CLI" name="TELEFONO_CLI" type="text" value="<?php echo $datosUsuario['TELEFONO_CLI']; ?>"/></li>
 				<li><b>Dirección: </b><input id="DIRECCION_CLI" name="DIRECCION_CLI" type="text" value="<?php echo $datosUsuario['DIRECCION_CLI']; ?>"/></li>
 				<li><b>Contraseña: </b><input id="PASS_CLI" name="PASS_CLI" type="password" value="<?php echo $datosUsuario['PASS_CLI']; ?>"/></li>
-				<li><b>Confirmar contraseña: </b><input id="CONF_PASS_EMP" name="CONF_PASS_CLI" type="password" value="<?php echo $datosUsuario['PASS_CLI']; ?>"/></li>
+				<li><b>Confirmar contraseña: </b><input id="CONF_PASS_CLI" name="CONF_PASS_CLI" type="password" value="<?php echo $datosUsuario['PASS_CLI']; ?>"/></li>
 			</ul>
 			
 			<?php }else{ ?>
@@ -81,7 +97,7 @@
 			<ul>	
 				<li><b>Nombre: </b><?php echo $datosUsuario['NOMBRE_CLI']; ?></li>
 				<li><b>Apellidos: </b><?php echo $datosUsuario['APELLIDOS_CLI']; ?></li>	
-				<li><b>DNI: </b><?php echo $datosUsuario['DNI_CLI']; ?></li>
+				<li><b>DNI: </b><?php echo $datosUsuario['DNI_CLI']; ?></li>				
 				<li><b>E-mail: </b><?php echo $datosUsuario['EMAIL_CLI']; ?></li>
 				<li><b>Sexo: </b><?php echo $datosUsuario['SEXO_CLI']; ?></li>
 				<li>

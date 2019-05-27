@@ -177,7 +177,7 @@ VALUES('Alejandro','Martín Rubio','42122365Z', to_date('25/11/93','DD/MM/RR'), 1
 COMMIT;
 
 EXECUTE INSERTAR_CLIENTE('Teresa','Sánchez Medina','21254456V', to_date('08/10/91','DD/MM/RR'), 'teresa@us.es', 'Femenino','955825111', 'calle Roja','123456aA');
-EXECUTE INSERTAR_CLIENTE('Pepe','Perez Oliva','21254412V', to_date('18/12/89','DD/MM/RR'), 'pepe@us.es', 'Femenino','955825111', 'calle Roja','123456aA');
+EXECUTE INSERTAR_CLIENTE('Pepe','Perez Oliva','21254412V', to_date('18/12/89','DD/MM/RR'), 'pepe@us.es', 'Masculino','955825111', 'calle Roja','123456aA');
 EXECUTE INSERTAR_CLIENTE('Enrique','Pérez Torres','78777546G', to_date('21/04/75','DD/MM/RR'), 'enrique@us.es', 'Masculino','955818526', 'calle Verde','123456aA');
 EXECUTE INSERTAR_CLIENTE('Luís','Vega Díaz','15486345R', to_date('11/05/87','DD/MM/RR'), 'luis@us.es', 'Masculino', '954589576', 'calle Azul', '123456aA');
 
