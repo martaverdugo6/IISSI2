@@ -31,23 +31,26 @@
 
 	<ul>
 		<?php if(crear_producto($conexion,$nuevoProd)){	?>
-		<li>
-			Nombre: <? php echo $nuevoProd['nombre']; ?>
-		</li>
-		<li>
-			Descripción: <? php echo $nuevoProd['descripcion']; ?>
-		</li>
-		<li>
-			Stock: <? php echo $nuevoProd['stock']; ?>
-		</li>
-		<li>
-			Precio: <? php echo $nuevoProd['precio']; ?>
-		</li>
-		<li>
-			Categoria: <? php echo $nuevoProd['categoria']; ?>
-		</li>
+			<li>
+				Nombre: <?php echo $nuevoProd['nombre']; ?>
+			</li>
+			<li>
+				Descripción: <?php echo $nuevoProd['descripcion']; ?>
+			</li>
+			<li>
+				Stock: <?php echo $nuevoProd['stock']; ?>
+			</li>
+			<li>
+				Precio: <?php echo $nuevoProd['precio']; ?>
+			</li>
+			<li>
+				Categoria: <?php echo $nuevoProd['categoria']; ?>
+			</li>
+
 		<?php }else{ ?>
-			No se ha podido insertar con exito
+			<h1>¡Vaya!</h1>
+			<p>No se ha podido insertar con exito</p>
+		
 		<?php } ?>
 	</ul>
 

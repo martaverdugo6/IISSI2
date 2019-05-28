@@ -64,11 +64,11 @@
 		</li>
 		<li>
 			<p>Categoria:</p>
-			<input name="categoria" type="radio" value="bebida" <?php if($creandoProd['categoria']=='Femenino') echo ' checked ';?>/>Bebida
-			<input name="categoria" type="radio" value="alcohol" <?php if($creandoProd['categoria']=='Masculino') echo ' checked ';?>/>Alcohol
-			<input name="categoria" type="radio" value="congelado" <?php if($creandoProd['categoria']=='Sin especificar') echo ' checked ';?>/>Congelado
-			<input name="categoria" type="radio" value="confiteria" <?php if($creandoProd['categoria']=='Sin especificar') echo ' checked ';?>/>Confiteria
-			<input name="categoria" type="radio" value="golosina" <?php if($creandoProd['categoria']=='Sin especificar') echo ' checked ';?>/>Golosina
+			<input name="categoria" type="radio" value="bebida" <?php if($creandoProd['categoria']=='bebida') echo ' checked ';?>/>Bebida
+			<input name="categoria" type="radio" value="alcohol" <?php if($creandoProd['categoria']=='alcohol') echo ' checked ';?>/>Alcohol
+			<input name="categoria" type="radio" value="congelado" <?php if($creandoProd['categoria']=='congelado') echo ' checked ';?>/>Congelado
+			<input name="categoria" type="radio" value="confiteria" <?php if($creandoProd['categoria']=='confiteria') echo ' checked ';?>/>Confiteria
+			<input name="categoria" type="radio" value="golosina" <?php if($creandoProd['categoria']=='golosina') echo ' checked ';?>/>Golosina
 		</li>
 		<li>
 			<input class="añadirProducto" type="submit" name="submit" value="Crear" />

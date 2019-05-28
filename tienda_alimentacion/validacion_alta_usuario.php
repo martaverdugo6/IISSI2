@@ -73,7 +73,7 @@
 
 		// Validación de la contraseña
 		if(!isset($nuevoUsuario['pass']) || strlen($nuevoUsuario['pass'])<8){
-			$errores [] = "<p>CONTRASEÑA no válida: debe tener al menos 8 caracteres</p>";
+			$errores[] = "<p>CONTRASEÑA no válida: debe tener al menos 8 caracteres</p>";
 		}else if(!preg_match("/[a-z]+/", $nuevoUsuario['pass']) || 
 						!preg_match("/[A-Z]+/", $nuevoUsuario['pass']) || 
 								!preg_match("/[0-9]+/", $nuevoUsuario['pass'])){
