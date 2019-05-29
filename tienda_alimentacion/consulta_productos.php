@@ -112,11 +112,15 @@
 				<?php } ?>			
 			</div>
 		</nav>
+		
 		<?php if(isset($_SESSION["datosEmpleado"])){ ?>
-			<div>
-				<a href="crear_producto.php"><i class="fas fa-plus"></i>añadir nuevo producto</a>
+		
+			<div id="enlace_crear_producto">
+				<i class="fas fa-plus"></i><a title="Añadir nuevo producto" href="crear_producto.php">añadir nuevo producto</a>
 			</div>
+		
 		<?php } ?>
+		
 		<table class="PrimeraLineaTablaProductos">
 			
 			<tr>
@@ -154,23 +158,26 @@
 						<td><div class="nombre_pro"><?php echo $fila["NOMBRE_PRO"]; ?></div></td>
 						
 						<td><div class="descripcion"><i><?php echo $fila["DESCRIPCION"]; ?></i></div></td>	
-						
-						<td><div class="precio_pro"><?php echo $fila["PRECIO_PRO"]."€"; ?></div></td>
+						<?php if($fila["PRECIO_PRO"] < 1){ ?>
+							<td><div class="precio_pro"><?php echo "0".$fila["PRECIO_PRO"]."€"; ?></div></td>
+						<?php }else{ ?>
+							<td><div class="precio_pro"><?php echo $fila["PRECIO_PRO"]."€"; ?></div></td>
+						<?php } ?>
 
 					<?php } ?>
 
 					<?php if(isset($_SESSION["datosEmpleado"])){ ?>
 						<div id="botones_fila">
 						<?php if (isset($producto) and ($producto["OID_PRO"] == $fila["OID_PRO"])) { ?>
-							<td><button id="guardar" name="guardar" type="submit" class="editar_fila">
+							<td><button title="Guardar edición" id="guardar" name="guardar" type="submit" class="editar_fila">
 								<img src="img/guardar.png" class="editar_fila" alt="Guardar modificación">
 							</button></td>
 						<?php } else {?>
-							<td><button id="editar" name="editar" type="submit" class="editar_fila">
+							<td><button title="Editar producto" id="editar" name="editar" type="submit" class="editar_fila">
 								<img src="img/editar.png" class="editar_fila" alt="Editar producto">
 							</button></td>
 						<?php } ?>
-							<td><button id="borrar" name="borrar" type="submit" class="editar_fila">
+							<td><button title="Eliminar producto" id="borrar" name="borrar" type="submit" class="editar_fila">
 								<img src="img/eliminar.png" class="editar_fila" alt="Borrar producto">
 							</button></td>
 						</div>

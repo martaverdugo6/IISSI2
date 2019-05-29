@@ -145,7 +145,7 @@ div.error{
 /*-------------------------------------------BOTONES---------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
 
-input.registrarse, input.botonEntrar{
+input.registrarse, input.botonEntrar, input.añadirProducto{
     background-color: gray;			/*Color del fondo del boton*/
     color: white;					/*Color de las letras*/
     padding: 12px 20px;				/*alto por ancho*/
@@ -154,7 +154,7 @@ input.registrarse, input.botonEntrar{
     border-radius: 4px;				/*esquinas redondeadas*/
     cursor: pointer;
 }	
-input.registrarse:hover, input.botonEntrar:hover, input.cambiarPagina:hover {			/*Cuando está el ratón encima*/
+input.registrarse:hover, input.botonEntrar:hover, input.cambiarPagina:hover, input.añadirProducto:hover{			/*Cuando está el ratón encima*/
     background-color: #91989E;
 }
 
@@ -323,6 +323,30 @@ table img{							/*Botones de borrar y editar*//*Aquí se modifican también los
 	padding: 10px;
 	border: 2px solid red;
 }
+
+#enlace_crear_producto a{
+	text-decoration: none;
+	text-transform: uppercase;
+	padding: 5px;			/*separación entre el texto y el más de su izquierda*/
+	color: black;
+	font-size: 110%
+}
+
+#enlace_crear_producto{
+	padding-bottom: 3%;
+	padding-left: 2%
+}
+
+
+
+
+
+
+
+
+
+
+
 /*-----------------------------------------------------------------------------------------------------*/
 /*---------------------------------------CONSULTA OFERTAS----------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
@@ -393,11 +417,6 @@ table img{							/*Botones de borrar y editar*//*Aquí se modifican también los
 	position: relative;
 	padding: 1%;
 }
-
-
-
-
-
 /*-----------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------EXCEPCIÓN-------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
@@ -420,6 +439,7 @@ div.datosContacto{
 	margin: 10px;
 	margin-top: 60px;
 	margin-left: 20px;
+	font-size: 90%;
 }
 div.datosContacto p{
 	margin-left: 20px;
@@ -454,6 +474,42 @@ div.preguntasFrecuentes a:hover{
 	border: 2px solid #F00909;
 }
 /*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------SOBRE NOSOTROS--------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+#sobre_nosotros h1{			/*Titulo sobre nosotros*/
+	color: #5EA33F;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-top: 50px
+}
+#sobre_nosotros p{
+	width: 70%;
+	padding-left: 1%;
+}
+
+#img_establecimiento{
+	margin-left: 2%;
+	padding: 2%;
+	width: 30%;
+	height:30%;
+}
+#img_cajera{
+	padding: 2%;
+	width: 20%;
+	height:20%;
+}
+#img_carrito{
+	padding: 2%;
+	width: 30%;
+	height:30%;
+}
+
+
+
+
+/*-----------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------ENLACES PAGINACION----------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
 #enlaces a{
@@ -461,10 +517,62 @@ div.preguntasFrecuentes a:hover{
 	background-color: #D3BCBC;
 	color: #000000;
 	margin: 0;
-	padding: 10;
+	padding: 3;
+	border-radius: 3px;
 }
 #enlaces a:hover{
 	background-color: #717070;
+}
+
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------CREAR PRODUCTO--------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+#nuevoProducto{				/*lista entera*/
+	list-style-type: none;
+}
+
+#nuevoProducto li{			/*cada fila*/
+	margin: 2%;
+}
+#nuevoProducto li p{		/*cada "titulo" */
+	font-size: 120%;
+}
+
+#nuevoProducto li label{	/*el check categoria*/
+	padding-right: 3%;		/*separar los checks entre si*/
+}
+
+#vueltaAtras a{				/*enlace de volver*/
+	text-decoration: none;	/*quita la rayita de enlace*/
+	font-size: 110%;
+	color:black;
+	padding: 1%;			/*separación entre "volver" y la flechita de su izquierda*/
+}
+
+#vueltaAtras{
+	padding: 1%;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------ACCION CREAR PROD-----------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+#producto_creado{				/*lista entera*/
+	list-style-type: none;
+}
+
+#producto_creado a{
+	text-decoration: none;	/*quita la rayita de enlace*/
+	color: #565550;
+}
+
+#producto_creado li{
+	padding: 1%;
+	font-size: 110%;
+}
+
+#producto_creado li a{
+	padding-top: 2%;
 }
 
 /*-----------------------------------------------------------------------------------------------------*/
@@ -524,11 +632,14 @@ div.preguntasFrecuentes a:hover{
 @media screen and (max-width:1300px) {
 	div.informacion fieldset{
 		float: none;
+		margin-left: 25%;
 	}	
 	div.informacion fieldset h2{
 		overflow: hidden;
+		font-size: 110%;
 	}
 	div.informacion{
 		height: 100%;
+		
 	}
 }

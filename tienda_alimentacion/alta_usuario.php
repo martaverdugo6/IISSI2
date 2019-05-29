@@ -32,9 +32,21 @@
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="img/logoVentana.png" />
 	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+	<script src="js/passColor.js" type="text/javascript"></script>
 	<title>Tienda de Alimentación: alta usuario</title>
 </head>
 <body>
+	<script type="text/javascript">
+	
+	$(document).ready(function(){
+
+		$("#pass").on("keyup", function(){
+			passwordColor();
+		});
+
+	});
+
+	</script>
 	<?php
 		include_once("cabecera.php");
 		include_once("menu.php");

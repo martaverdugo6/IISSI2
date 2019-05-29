@@ -1,5 +1,5 @@
 <footer>
-		<div class="informacion">
+	<div class="informacion">
 		<fieldset class="atencionCliente">
 			<img src="img/atencion_cliente.jpg">
 			<h1>Atención al cliente</h1>

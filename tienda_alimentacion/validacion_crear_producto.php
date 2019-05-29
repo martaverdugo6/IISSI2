@@ -45,6 +45,8 @@
 		// Validación del stock
 		if($nuevoProd['stock'] == ""  ){
 			$errores[] = "<p>El campo STOCK debe ser rellenado</p>";
+		}else if($nuevoProd['stock'] < 20){
+			$errores[] = "<p>El STOCK debe ser mayor de 20</p>";
 		}
 
 		// Validación del precio

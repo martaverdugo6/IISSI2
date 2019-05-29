@@ -2,6 +2,10 @@
 <?php 
 
 	session_start();
+
+	if(!isset($_SESSION["datosEmpleado"])){		//Solo podemos entrar aquí si se ha iniciado sesión como empleado
+		header("Location: login.php");
+	}
 	
 	if (!isset($_SESSION['creandoProd'])) {
 		$creandoProd['nombre'] = "";
@@ -33,8 +37,9 @@
 	<title>Tienda de Alimentación: crear producto</title>
 </head>
 <body>
-	<i class="fas fa-angle-left"></i><a href="consulta_productos.php">Volver</a>
-	
+	<div id="vueltaAtras">
+		<i class="fas fa-angle-left"></i><a title="Volver atrás" href="consulta_productos.php">Volver</a>
+	</div>
 	<?php 
 	// Mostrar los erroes de validación (Si los hay)
 	if (isset($errores) && count($errores)>0) { 
@@ -45,35 +50,38 @@
 		}
 	?>
 <form id="crearProd" method="POST" action="validacion_crear_producto.php" novalidate>
-	<ul>
-		<li>
-			<p>Nombre:</p>
-			<input id="nombre" type="text" name="nombre" value="<?php echo $creandoProd['nombre'];?>" required/>
-		</li>
-		<li>
-			<p>Descripción:</p>
-			<input id="descripcion" type="text" name="descripcion" value="<?php echo $creandoProd['descripcion'];?>" required/>
-		</li>
-		<li>
-			<p>Stock:</p>
-			<input id="stock" type="text" name="stock" value="<?php echo $creandoProd['stock'];?>" required/>
-		</li>
-		<li>
-			<p>Precio:</p>
-			<input id="precio" type="text" name="precio" value="<?php echo $creandoProd['precio'];?>" required/>
-		</li>
-		<li>
-			<p>Categoria:</p>
-			<input name="categoria" type="radio" value="bebida" <?php if($creandoProd['categoria']=='bebida') echo ' checked ';?>/>Bebida
-			<input name="categoria" type="radio" value="alcohol" <?php if($creandoProd['categoria']=='alcohol') echo ' checked ';?>/>Alcohol
-			<input name="categoria" type="radio" value="congelado" <?php if($creandoProd['categoria']=='congelado') echo ' checked ';?>/>Congelado
-			<input name="categoria" type="radio" value="confiteria" <?php if($creandoProd['categoria']=='confiteria') echo ' checked ';?>/>Confiteria
-			<input name="categoria" type="radio" value="golosina" <?php if($creandoProd['categoria']=='golosina') echo ' checked ';?>/>Golosina
-		</li>
-		<li>
-			<input class="añadirProducto" type="submit" name="submit" value="Crear" />
-		</li>
-	</ul>
+	<fieldset>
+		<legend>Nuevo producto</legend>
+		<ul id="nuevoProducto">
+			<li>
+				<p>Nombre:</p>
+				<input id="nombre" type="text" name="nombre" value="<?php echo $creandoProd['nombre'];?>" required/>
+			</li>
+			<li>
+				<p>Descripción:</p>
+				<input id="descripcion" type="text" name="descripcion" value="<?php echo $creandoProd['descripcion'];?>" required/>
+			</li>
+			<li>
+				<p>Stock:</p>
+				<input id="stock" type="text" name="stock" value="<?php echo $creandoProd['stock'];?>" required/>
+			</li>
+			<li>
+				<p>Precio:</p>
+				<input id="precio" type="text" name="precio" value="<?php echo $creandoProd['precio'];?>" required/>
+			</li>
+			<li>
+				<p>Categoria:</p>
+				<label><input name="categoria" type="radio" value="bebida" <?php if($creandoProd['categoria']=='bebida') echo ' checked ';?>/>Bebida</label>
+				<label><input name="categoria" type="radio" value="alcohol" <?php if($creandoProd['categoria']=='alcohol') echo ' checked ';?>/>Alcohol</label>
+				<label><input name="categoria" type="radio" value="congelado" <?php if($creandoProd['categoria']=='congelado') echo ' checked ';?>/>Congelado</label>
+				<label><input name="categoria" type="radio" value="confiteria" <?php if($creandoProd['categoria']=='confiteria') echo ' checked ';?>/>Confiteria</label>
+				<label><input name="categoria" type="radio" value="golosina" <?php if($creandoProd['categoria']=='golosina') echo ' checked ';?>/>Golosina</label>
+			</li>
+			<li>
+				<input class="añadirProducto" type="submit" name="submit" value="Crear" />
+			</li>
+		</ul>
+	</fieldset>
 </form>
 </body>
 </html>

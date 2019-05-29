@@ -30,7 +30,7 @@
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="img/logoVentana.png" />
 	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
-	<title>Exito en el alta de usuario</title>
+	<title>Alta de usuario</title>
 </head>
 <body>
 	<?php

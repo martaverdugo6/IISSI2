@@ -125,15 +125,15 @@
 					<?php if(isset($_SESSION["datosEmpleado"])){ ?>
 						<div id="botones_fila">
 							<?php if (isset($oferta) and ($oferta["OID_OFE"] == $fila["OID_OFE"])) { ?>
-							<td><button id="guardar" name="guardar" type="submit" class="editar_fila">
+							<td><button title="Guardar edición" id="guardar" name="guardar" type="submit" class="editar_fila">
 								<img src="img/guardar.png" class="editar_fila" alt="Guardar modificación">
 							</button></td>
 						<?php } else {?>
-							<td><button id="editar" name="editar" type="submit" class="editar_fila">
+							<td><button title="Editar oferta" id="editar" name="editar" type="submit" class="editar_fila">
 								<img src="img/editar.png" class="editar_fila" alt="Editar oferta">
 							</button></td>
 						<?php } ?>
-							<td><button id="borrar" name="borrar" type="submit" class="editar_fila">
+							<td><button title="Eliminar oferta" id="borrar" name="borrar" type="submit" class="editar_fila">
 								<img src="img/eliminar.png" class="editar_fila" alt="Borrar oferta">
 							</button></td>
 						</div>

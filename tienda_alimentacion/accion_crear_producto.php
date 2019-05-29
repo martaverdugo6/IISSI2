@@ -29,24 +29,27 @@
 </head>
 <body>
 
-	<ul>
+	<ul id="producto_creado">
 		<?php if(crear_producto($conexion,$nuevoProd)){	?>
+			<h1>Se ha creado el siguiente producto con exito:</h1>
 			<li>
-				Nombre: <?php echo $nuevoProd['nombre']; ?>
+				<b>Nombre:</b> <?php echo $nuevoProd['nombre']; ?>
 			</li>
 			<li>
-				Descripción: <?php echo $nuevoProd['descripcion']; ?>
+				<b>Descripción:</b> <?php echo $nuevoProd['descripcion']; ?>
 			</li>
 			<li>
-				Stock: <?php echo $nuevoProd['stock']; ?>
+				<b>Stock:</b> <?php echo $nuevoProd['stock']." uds"; ?>
 			</li>
 			<li>
-				Precio: <?php echo $nuevoProd['precio']; ?>
+				<b>Precio:</b> <?php echo $nuevoProd['precio']."€"; ?>
 			</li>
 			<li>
-				Categoria: <?php echo $nuevoProd['categoria']; ?>
+				<b>Categoria:</b> <?php echo $nuevoProd['categoria']; ?>
 			</li>
-
+			<li>
+				<a href="consulta_productos.php">Ir a la página principal de productos</a>
+			</li>
 		<?php }else{ ?>
 			<h1>¡Vaya!</h1>
 			<p>No se ha podido insertar con exito</p>

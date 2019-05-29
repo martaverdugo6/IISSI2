@@ -10,8 +10,8 @@ CREATE TABLE PRODUCTO(
   nombre_pro varchar2(200) NOT NULL,
   descripcion varchar2(200),
   stock integer CHECK (stock > 19) NOT NULL,
-  precio_pro number(5,2) NOT NULL,
-  categoria varchar2(20) CHECK (categoria IN ('bebida','alcohol','congelado','confiteria','golosina')) NOT NULL,
+  precio_pro NUMBER(5,2) NOT NULL CHECK(precio_pro>0.0),
+  categoria varchar2(50) CHECK (categoria IN ('bebida','alcohol','congelado','confiteria','golosina')) NOT NULL,
   OID_pro integer NOT NULL,
   
   PRIMARY KEY(OID_pro) 
@@ -20,9 +20,9 @@ CREATE TABLE PRODUCTO(
 CREATE TABLE CLIENTE(
   nombre_cli varchar2(50) NOT NULL, 
   apellidos_cli varchar2(50) NOT NULL,
-  dni_cli varchar2(9) NOT NULL UNIQUE,
+  dni_cli varchar2(9) NOT NULL,
   fecha_nacimiento_cli DATE,
-  email_cli varchar2(50) NOT NULL UNIQUE,
+  email_cli varchar2(50) NOT NULL,
   sexo_cli varchar2(50) CHECK (sexo_cli IN ('Femenino','Masculino','Sin especificar')),
   telefono_cli varchar2(50),
   direccion_cli varchar2(200),
