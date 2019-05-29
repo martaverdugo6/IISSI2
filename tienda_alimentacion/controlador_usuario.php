@@ -11,19 +11,9 @@
 		$usuario_mod["TELEFONO_CLI"]= $_REQUEST["TELEFONO_CLI"];
 		$usuario_mod["DIRECCION_CLI"]= $_REQUEST["DIRECCION_CLI"];
 		$usuario_mod["PASS_CLI"]= $_REQUEST["PASS_CLI"];
-		$usuario_mod['CONF_PASS_CLI'] = $_REQUEST['CONF_PASS_CLI'];
 		$usuario_mod["OID_CLI"]= $_REQUEST["OID_CLI"];
 
-		// Validamos el formulario en servidor 
-		$errores = validarPass($usuario_mod);
-
-		if(count($errores)>0){
-			// Guardo en la sesión los mensajes de error
-			$_SESSION['errores'] = $errores;
-			// Redirigimos al usuario al formulario
-			Header("Location:cuenta_usuario.php");
-		}
-
+		
 		$_SESSION["usuario_mod"] = $usuario_mod;		//en $_SESSION['usuario_mod'] se guardan los datos del empleado que vienen de cuenta_empleado.php
 
 		if (isset($_REQUEST["editar"])){		//Se ha pulsado el boton editar datos usuario
@@ -41,23 +31,5 @@
 	}
 	else 
 		Header("Location: cuenta_usuario.php");
-
-	function validarPass($usuario_mod){
-		if(!isset($usuario_mod['PASS_CLI']) || strlen($usuario_mod['PASS_CLI'])<8){
-			$errores[] = "<p>CONTRASEÑA no válida: debe tener al menos 8 caracteres</p>";
-		}else if(!preg_match("/[a-z]+/", $usuario_mod['PASS_CLI']) || 
-						!preg_match("/[A-Z]+/", $usuario_mod['PASS_CLI']) || 
-								!preg_match("/[0-9]+/", $usuario_mod['PASS_CLI'])){
-
-			$errores[] = "<p>CONTRASEÑA no válida: debe contener letras mayúsculas y minúsculas y 																					dígitos</p>";
-		}else if($usuario_mod['PASS_CLI'] != $usuario_mod['CONF_PASS_CLI']){
-			$errores[] = "<p>La confirmación de contraseña no coincide con la contraseña</p>";
-		}
-
-
-		print_r($errores);
-		die();
-		return $errores;
-	}
 
 ?>
