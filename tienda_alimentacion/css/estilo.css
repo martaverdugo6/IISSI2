@@ -485,25 +485,33 @@ div.preguntasFrecuentes a:hover{
 	margin-top: 50px
 }
 #sobre_nosotros p{
-	width: 70%;
 	padding-left: 1%;
+	width: 100%;
+	margin-bottom: 10%;
+	margin-top: 3%;
+	text-indent: 3%;
+	line-height: 1.8;
 }
 
 #img_establecimiento{
 	margin-left: 2%;
 	padding: 2%;
-	width: 30%;
-	height:30%;
+	width: 35%;
+	height:35%;
+	margin-bottom: 0;
+	float: right;
 }
 #img_cajera{
 	padding: 2%;
 	width: 20%;
 	height:20%;
+	float: right;
 }
 #img_carrito{
 	padding: 2%;
 	width: 30%;
 	height:30%;
+	float: right;
 }
 
 
