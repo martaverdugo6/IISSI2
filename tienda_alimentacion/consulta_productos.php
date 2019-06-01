@@ -116,7 +116,7 @@
 		<?php if(isset($_SESSION["datosEmpleado"])){ ?>
 		
 			<div id="enlace_crear_producto">
-				<i class="fas fa-plus"></i><a title="Añadir nuevo producto" href="crear_producto.php">añadir nuevo producto</a>
+				<i class="fas fa-plus"></i><a title="Añadir nuevo producto" href="crear_producto.php"><b>añadir nuevo producto</b></a>
 			</div>
 		
 		<?php } ?>
@@ -181,8 +181,9 @@
 								<img src="img/eliminar.png" class="editar_fila" alt="Borrar producto">
 							</button></td>
 						</div>
+					<?php }else{ ?>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 					<?php } ?>
-					<td>11111111111111</td>
 					</tr>
 					</table>
 					<hr>

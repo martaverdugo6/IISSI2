@@ -1,32 +1,61 @@
-/*EXECUTE INSERTAR_PRODUCTO('Agua mineral (Aquarel)','Tapón especial para niños. PACK 6 x 330 CC', 50, 1.9, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Agua mineral (Font natura)','Tamaño ahorro. Garrafa 8 L', 50, 0.72, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Cerveza rubia suave (Steinburg)','Lata Pack 12 x 330 CC', 50, 2.64, 'alcohol');
-EXECUTE INSERTAR_PRODUCTO('Cerveza rubia sin alcohol 0% (Heineken)', 'Lata pack 8 x 330 CC', 50, 5.04, 'alcohol');
-EXECUTE INSERTAR_PRODUCTO('Bebida energética Green (Monster)', 'Lata 500 CC', 50, 1.0, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Bebida energética (BURN)', 'Lata 500 CC', 50, 0.89, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Bebida isotónica limón (Aquarius)', 'Lata pack 8 x 330 CC', 50, 4.56, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Bebida isotónica naranja (Aquarius)', 'Lata pack 8 x 330 CC', 50, 4.56, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Vino blanco (Barbadillo)', 'BOTELLA 750 CC', 50, 3.75 , 'alcohol');
-EXECUTE INSERTAR_PRODUCTO('Vino tinto (Don Simon)', 'Brick 1 L', 50, 1.60, 'alcohol');
-EXECUTE INSERTAR_PRODUCTO('Ginebra London Dry (Sheriton)', 'Botella 700 CC', 50, 6.95 ,'alcohol');
-EXECUTE INSERTAR_PRODUCTO('Ron añejo (Barcelo)', 'Botella 700 CC', 50, 13.99,'alcohol');
-EXECUTE INSERTAR_PRODUCTO('Naranja con gas (Fanta)', 'Botella pack 2 x 2 L', 50, 2.00, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Naranja con gas zero (Fanta)', 'Botella 2 L', 50, 1.00, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Limón con gas (Fanta)', 'Botella 2 L', 50, 1.30, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Limón con gas zero (FANTA)', 'Botella 2 L', 50, 1.30, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Cola con gas (Coca-Cola)', 'Pack ahorro. Botella pack 4 x 500 CC', 50, 3.40, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Cola con gas cero (Coca-Cola)', 'Botella 2 L', 50, 3.40, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Cola Light sin Cafeina (Coca-Cola)', 'Lata 330 CC', 50, 0.50, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Batido chocolate (Puleva)', 'Botella 1 L', 50, 1.14, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Batido fresa (Puleva)', 'Botella 1 L', 50, 1.14, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Batido vainilla (Puleva)', 'Botella 1 L', 50, 1.14, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Zumo naranja (Disfruta)', 'Botella 1 L', 50, 1.20, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Zumo piña (Disfruta)', 'Botella 1 L', 50, 1.20, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Zumo melocotón (Disfruta)', 'Botella 1 L', 50, 1.20, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Leche entera (Covap)', 'Brick 1 L', 50, 0.79, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Leche entera (Puleva)', 'Brick 1 L', 50, 0.80, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Leche semidesnatada (Covap)', 'Brick 1 L', 50, 0.79, 'bebida');
-EXECUTE INSERTAR_PRODUCTO('Leche semidesnatada (Puleva)', 'Brick 1 L', 50, 0.80, 'bebida');*/
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Agua mineral (Aquarel)','Tapón especial para niños. PACK 6 x 330 CC', 50, 1.98, 'bebida', 1);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Agua mineral (Font natura)','Tamaño ahorro. Garrafa 8 L', 50, 0.72, 'bebida', 2);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Cerveza rubia suave (Steinburg)','Lata Pack 12 x 330 CC', 50, 2.64, 'alcohol', 3);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Cerveza rubia sin alcohol 0% (Heineken)', 'Lata pack 8 x 330 CC', 50, 5.04, 'alcohol', 4);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Bebida energética Green (Monster)', 'Lata 500 CC', 50, 1.00, 'bebida', 5);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Bebida energética (BURN)', 'Lata 500 CC', 50, 0.89, 'bebida', 6);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Bebida isotónica limón (Aquarius)', 'Lata pack 8 x 330 CC', 50, 4.56, 'bebida', 7);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Bebida isotónica naranja (Aquarius)', 'Lata pack 8 x 330 CC', 50, 4.56, 'bebida', 8);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Vino blanco (Barbadillo)', 'BOTELLA 750 CC', 50, 3.75 , 'alcohol', 9);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Vino tinto (Don Simon)', 'Brick 1 L', 50, 1.60, 'alcohol', 10);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Ginebra London Dry (Sheriton)', 'Botella 700 CC', 50, 6.95 ,'alcohol', 11);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Ron añejo (Barcelo)', 'Botella 700 CC', 50, 13.99,'alcohol', 12);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Naranja con gas (Fanta)', 'Botella pack 2 x 2 L', 50, 2.00, 'bebida', 13);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Naranja con gas zero (Fanta)', 'Botella 2 L', 50, 1.00, 'bebida', 14);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Limón con gas (Fanta)', 'Botella 2 L', 50, 1.30, 'bebida', 15);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Limón con gas zero (FANTA)', 'Botella 2 L', 50, 1.30, 'bebida', 16);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Cola con gas (Coca-Cola)', 'Pack ahorro. Botella pack 4 x 500 CC', 50, 3.40, 'bebida', 17);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Cola con gas cero (Coca-Cola)', 'Botella 2 L', 50, 3.40, 'bebida', 18);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Cola Light sin Cafeina (Coca-Cola)', 'Lata 330 CC', 50, 0.50, 'bebida', 19);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Batido chocolate (Puleva)', 'Botella 1 L', 50, 1.14, 'bebida', 20);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Batido fresa (Puleva)', 'Botella 1 L', 50, 1.14, 'bebida', 21);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Batido vainilla (Puleva)', 'Botella 1 L', 50, 1.14, 'bebida', 22);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Zumo naranja (Disfruta)', 'Botella 1 L', 50, 1.20, 'bebida', 23);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Zumo piña (Disfruta)', 'Botella 1 L', 50, 1.20, 'bebida', 24);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Zumo melocotón (Disfruta)', 'Botella 1 L', 50, 1.20, 'bebida', 25);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Leche entera (Covap)', 'Brick 1 L', 50, 0.79, 'bebida', 26);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Leche entera (Puleva)', 'Brick 1 L', 50, 0.80, 'bebida', 27);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Leche semidesnatada (Covap)', 'Brick 1 L', 50, 0.79, 'bebida', 28);
+INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
+VALUES ('Leche semidesnatada (Puleva)', 'Brick 1 L', 50, 0.80, 'bebida', 29);
 INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
 VALUES ('Leche desnatada (Covap)', 'Brick 1 L', 50, 0.79, 'bebida', 30);
 INSERT INTO PRODUCTO(nombre_pro, descripcion, stock, precio_pro, categoria, OID_pro)
@@ -117,10 +146,10 @@ VALUES ('Berlinas de azucar al horno', 'Paquete 4 uds - 220 gr', 50, 1.20, 'conf
 COMMIT;
 
 
-/*INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
+INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
 VALUES (10, to_date('01/06/19','DD/MM/RR'),to_date('01/07/19','DD/MM/RR'), 2, 1);
 INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
-VALUES (10, to_date('01/08/19','DD/MM/RR'),to_date('01/09/19','DD/MM/RR'), 19, 2);*/
+VALUES (10, to_date('01/08/19','DD/MM/RR'),to_date('01/09/19','DD/MM/RR'), 19, 2);
 INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
 VALUES (25, to_date('01/08/19','DD/MM/RR'),to_date('01/09/19','DD/MM/RR'), 36, 3);
 INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
@@ -131,15 +160,15 @@ INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
 VALUES (10, to_date('01/09/19','DD/MM/RR'),to_date('01/10/19','DD/MM/RR'), 67, 6);
 INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
 VALUES (50, to_date('01/09/19','DD/MM/RR'),to_date('01/10/19','DD/MM/RR'), 71, 7);
-/*INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
+INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
 VALUES (50, to_date('01/10/19','DD/MM/RR'),to_date('01/12/19','DD/MM/RR'), 10, 8);
 INSERT INTO OFERTA(descuento, fecha_inicio, fecha_fin, OID_pro, OID_ofe)
-VALUES (50, to_date('01/10/19','DD/MM/RR'),to_date('01/12/19','DD/MM/RR'), 11, 9);*/
+VALUES (50, to_date('01/10/19','DD/MM/RR'),to_date('01/12/19','DD/MM/RR'), 11, 9);
 
 COMMIT;
 
 INSERT INTO EMPLEADO(nombre_emp, apellidos_emp, dni_emp, fecha_nacimiento_emp, salario, email_emp, telefono_emp, pass_emp, OID_emp)
-VALUES('María','Rodríguez Gómez','84672996P', to_date('19/02/92','DD/MM/RR'), 1500, 'maria@tienda.com', '955824000', '123456aA', 1);
+VALUES('Marta','Verdugo Martínez','84672996P', to_date('19/02/92','DD/MM/RR'), 1500, 'marta@tienda.com', '955824000', '123456aA', 1);
 INSERT INTO EMPLEADO(nombre_emp, apellidos_emp, dni_emp, fecha_nacimiento_emp, salario, email_emp, telefono_emp, pass_emp, OID_emp)
 VALUES('Laura','Mora Sánchez','46893652K', to_date('10/09/95','DD/MM/RR'), 1500, 'laura@tienda.com', '955812526', '123456aA', 2);
 INSERT INTO EMPLEADO(nombre_emp, apellidos_emp, dni_emp, fecha_nacimiento_emp, salario, email_emp, telefono_emp, pass_emp, OID_emp)
@@ -147,9 +176,17 @@ VALUES('Alejandro','Martín Rubio','42122365Z', to_date('25/11/93','DD/MM/RR'), 1
 
 COMMIT;
 
-EXECUTE INSERTAR_CLIENTE('Teresa','Sánchez Medina','21254456V', to_date('08/10/91','DD/MM/RR'), 'teresa@us.es', 'Femenino','955825111', 'calle Roja','123456aA');
-EXECUTE INSERTAR_CLIENTE('Pepe','Perez Oliva','21254412V', to_date('18/12/89','DD/MM/RR'), 'pepe@us.es', 'Masculino','955825111', 'calle Roja','123456aA');
-EXECUTE INSERTAR_CLIENTE('Enrique','Pérez Torres','78777546G', to_date('21/04/75','DD/MM/RR'), 'enrique@us.es', 'Masculino','955818526', 'calle Verde','123456aA');
-EXECUTE INSERTAR_CLIENTE('Luís','Vega Díaz','15486345R', to_date('11/05/87','DD/MM/RR'), 'luis@us.es', 'Masculino', '954589576', 'calle Azul', '123456aA');
+EXECUTE INSERTAR_CLIENTE('Teresa','Sánchez Medina','82549375W', to_date('08/10/91','DD/MM/RR'), 'teresa@us.es', 'Femenino','955825111', 'calle Roja','123456aA');
+EXECUTE INSERTAR_CLIENTE('Pepe','Perez Oliva','57842614G', to_date('18/12/89','DD/MM/RR'), 'pepe@us.es', 'Masculino','955825111', 'calle Roja','123456aA');
+EXECUTE INSERTAR_CLIENTE('Enrique','Jiménez Torres','85432156T', to_date('21/04/75','DD/MM/RR'), 'enrique@us.es', 'Masculino','955818526', 'calle Verde','123456aA');
+EXECUTE INSERTAR_CLIENTE('Luís','Fernández Díaz','84579454D', to_date('11/05/87','DD/MM/RR'), 'luis@us.es', 'Masculino', '954589576', 'calle Azul', '123456aA');
+EXECUTE INSERTAR_CLIENTE('Juan','Sánchez Caro','44584421S', to_date('08/10/91','DD/MM/RR'), 'teresa@us.es', 'Femenino','955825111', 'calle Roja','123456aA');
+EXECUTE INSERTAR_CLIENTE('Lucía','Valverde Oliva','54122174F', to_date('18/12/89','DD/MM/RR'), 'pepe@us.es', 'Masculino','955825111', 'calle Roja','123456aA');
+EXECUTE INSERTAR_CLIENTE('Oscar','Gaspar Mendoza','58411541P', to_date('21/04/75','DD/MM/RR'), 'enrique@us.es', 'Masculino','955818526', 'calle Verde','123456aA');
+EXECUTE INSERTAR_CLIENTE('Carlota','Nieto Díaz','75486345R', to_date('11/05/87','DD/MM/RR'), 'luis@us.es', 'Masculino', '954589576', 'calle Azul', '123456aA');
+EXECUTE INSERTAR_CLIENTE('Alberto','Martínez Rodríguez','21254456V', to_date('08/10/91','DD/MM/RR'), 'teresa@us.es', 'Femenino','955825111', 'calle Roja','123456aA');
+EXECUTE INSERTAR_CLIENTE('Sara','Quintana Padilla','47855442L', to_date('18/12/89','DD/MM/RR'), 'pepe@us.es', 'Masculino','955825111', 'calle Roja','123456aA');
+EXECUTE INSERTAR_CLIENTE('Rosa','González Guerra','74541154C', to_date('21/04/75','DD/MM/RR'), 'enrique@us.es', 'Masculino','955818526', 'calle Verde','123456aA');
+EXECUTE INSERTAR_CLIENTE('Ana','Morales Gutiérrez','25145448M', to_date('11/05/87','DD/MM/RR'), 'luis@us.es', 'Masculino', '954589576', 'calle Azul', '123456aA');
 
 COMMIT;

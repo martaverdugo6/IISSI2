@@ -34,7 +34,7 @@ function consultarUsuario($conexion,$email,$pass) {
 	return $stmt->fetchColumn();
 }
 
-function usuarioRegistrado($conexion,$email) {
+function usuarioRegistrado($conexion,$email) {			//Para saber si el email ya está registrado
 	$consulta = "SELECT COUNT(*) AS TOTAL FROM CLIENTE
 		WHERE email_cli =:email";
 	$stmt = $conexion -> prepare($consulta);
@@ -43,7 +43,7 @@ function usuarioRegistrado($conexion,$email) {
 	return $stmt->fetchColumn();
 }
 
-function consultarEmpleado($conexion,$email,$pass) {
+function consultarEmpleado($conexion,$email,$pass) {		//Cuenta el número de empleados con ese email y pass
 	$consulta = "SELECT COUNT(*) AS TOTAL FROM EMPLEADO
 		WHERE email_emp =:email AND pass_emp =:pass";
 	$stmt = $conexion -> prepare($consulta);
@@ -53,7 +53,7 @@ function consultarEmpleado($conexion,$email,$pass) {
 	return $stmt->fetchColumn();
 }
 
-function datosUsuario($conexion, $email){
+function datosUsuario($conexion, $email){		//Para obtener los datos de un usuario logeado
 	try{
 		$consulta = "SELECT * FROM CLIENTE WHERE email_cli =: email";
 		$stmt = $conexion -> prepare($consulta);
@@ -67,7 +67,7 @@ function datosUsuario($conexion, $email){
 	}
 }
 
-function datosEmpleado($conexion, $email){
+function datosEmpleado($conexion, $email){		//Para obtener los datos de un empleado logeado
 	try{
 		$consulta = "SELECT * FROM EMPLEADO WHERE email_emp =: email";
 		$stmt = $conexion -> prepare($consulta);
@@ -96,6 +96,7 @@ function modificar_usuarios($conexion,$usuario) {
 		$stmt -> bindParam(':pass', $usuario['PASS_CLI']);
 		$stmt -> bindParam(':oid', $usuario['OID_CLI']);
 		$stmt->execute();
+
 		return "";
 	} catch(PDOException $e) {
 		return $e->getMessage();
@@ -120,5 +121,14 @@ function modificar_empleados($conexion,$usuario) {
 	} catch(PDOException $e) {
 		return $e->getMessage();
     }
+}
+function consultarTodosUsuario($conexion) {
+	$consulta = "SELECT * FROM CLIENTE ORDER BY APELLIDOS_CLI";
+	try {
+	    return $conexion->query($consulta);
+	}catch(PDOException $e){
+		$_SESSION['excepcion'] = $e->GetMessage();
+		header("Location: excepcion.php");
+	}	
 }
 ?>

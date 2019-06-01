@@ -34,11 +34,11 @@
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="img/logoVentana.png" />
 	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
-	<title>Tienda de Alimentación: crear producto</title>
+	<title>Tienda de Alimentación: Crear producto</title>
 </head>
 <body>
 	<div id="vueltaAtras">
-		<i class="fas fa-angle-left"></i><a title="Volver atrás" href="consulta_productos.php">Volver</a>
+		<i class="fas fa-angle-left"></i><a title="Volver atrás" href="opciones_empleado.php">Volver</a>
 	</div>
 	<?php 
 	// Mostrar los erroes de validación (Si los hay)

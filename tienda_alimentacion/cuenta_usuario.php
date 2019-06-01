@@ -11,21 +11,20 @@
 		Header("Location: login.php");			// EN OTRO CASO HAY QUE DERIVAR AL LOGIN
 	}
 
-	// Si hay errores de validación, hay que mostrarlos y marcar los campos
-	if (isset($_SESSION['errores'])){
-		$errores = $_SESSION['errores'];
-	}
 
 	if(isset($_SESSION["usuario_mod"])){
 		unset($datosUsuario);
+		unset($_SESSION["datosUsuario"]);
 		$datosUsuario = $_SESSION["usuario_mod"];
+		$_SESSION["datosUsuario"] = $datosUsuario;
 		unset($_SESSION["usuario_mod"]);
 	}
+
 
 	function getFechaFormateada($fecha){
 		$fechaNacimiento = date('d/m/Y', strtotime($fecha));
 		return $fechaNacimiento;
-	}	
+	}
 
 	$conexion = crearConexionBD();
 

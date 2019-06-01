@@ -32,20 +32,19 @@
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="img/logoVentana.png" />
 	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
-	<script src="js/passColor.js" type="text/javascript"></script>
+	<script src="js/validacion_cliente_usuario.js" type="text/javascript"></script>
 	<title>Tienda de Alimentación: alta usuario</title>
 </head>
 <body>
-	<script type="text/javascript">
-	
-	$(document).ready(function(){
+    <script>
 
-		$("#pass").on("keyup", function(){
-			passwordColor();
+		$(document).ready(function() {
+
+			$("#pass").on("keyup", function() {
+				passwordColor();
+			});
+
 		});
-
-	});
-
 	</script>
 	<?php
 		include_once("cabecera.php");
@@ -61,7 +60,7 @@
     		echo "</div>";
   		}
 	?>
-	<form id="altaUsuario" method="get" action="validacion_alta_usuario.php" novalidate>
+	<form id="altaUsuario" method="get" action="validacion_alta_usuario.php" onsubmit="return validateForm()">
 			<p><i>Los campos marcados con asterisco ( <em>*</em> ) son obligatorios </i></p>		
 			<fieldset>
 				<legend><h2>Nuevo usuario</h2></legend>
@@ -107,12 +106,12 @@
 	
 					<div>
 					<label for="direccion">Dirección:</label>
-					<input id="direccion" name="direccion" type="text" size="40" value="<?php echo $formulario['direccion'];?>" required/>
+					<input id="direccion" name="direccion" type="text" size="40" value="<?php echo $formulario['direccion'];?>" required oninput="passwordValidation();"/>
 					</div>
 
 					<div>
 					<label for="pass">Contraseña:<em>*</em></label>
-					<input id="pass" name="pass" type="password" size="50" placeholder="Mínimo 8 caracteres entre mayúsculas, minusculas y dígitos" required />
+					<input id="pass" name="pass" type="password" size="50" placeholder="Mínimo 8 caracteres entre mayúsculas, minusculas y dígitos" oninput="passwordConfirmation();" required />
 					</div>
 
 					<div>

@@ -137,6 +137,8 @@
 								<img src="img/eliminar.png" class="editar_fila" alt="Borrar oferta">
 							</button></td>
 						</div>
+					<?php }else{ ?>
+						<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 					<?php } ?>
 					</tr>
 					</table>					

@@ -15,6 +15,7 @@
 			<?php if(isset($_SESSION['datosUsuario'])){?>
 				<li><a href="cuenta_usuario.php"><i class="far fa-user-circle"></i>Mi cuenta</a></li>
 			<?php }else if(isset($_SESSION['datosEmpleado'])){ ?>
+				<li><a href="opciones_empleado.php"><i class="fas fa-cog"></i>Opciones</a></li>
 				<li><a href="cuenta_empleado.php"><i class="far fa-user-circle"></i>Mi cuenta</a></li>
 			<?php } ?>
 		<?php } ?>
@@ -22,6 +23,7 @@
 		<li><a href="consulta_ofertas.php"><i class="fas fa-euro-sign"></i>Ofertas</a></li>
 		<li><a href="consulta_productos.php"><i class="fas fa-shopping-cart"></i>Productos</a></li>
 		<li><a href="index.php"><i class="fa fa-fw fa-home"></i>Inicio</a></li>
+
 	</ul>
 </nav>
 

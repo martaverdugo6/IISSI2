@@ -13,7 +13,9 @@
 
 	if(isset($_SESSION["empleado_mod"])){
 		unset($datosEmpleado);
+		unset($_SESSION["datosEmpleado"]);
 		$datosEmpleado = $_SESSION["empleado_mod"];
+		$_SESSION["datosEmpleado"] = $datosEmpleado;
 		unset($_SESSION["empleado_mod"]);
 	}
 
@@ -76,12 +78,13 @@
 			<!--EDITANDO DATOS EMPLEADOS-->	
 				<li><b>Nombre: </b><input id="NOMBRE_EMP" name="NOMBRE_EMP" type="text" value="<?php echo $datosEmpleado['NOMBRE_EMP']; ?>"/></li>
 				<li><b>Apellidos: </b><input id="APELLIDOS_EMP" name="APELLIDOS_EMP" type="text" value="<?php echo $datosEmpleado['APELLIDOS_EMP']; ?>"/></li>
-				<li><b>DNI: </b><input id="DNI_EMP" name="DNI_EMP" type="text" value="<?php echo $datosEmpleado['DNI_EMP']; ?>"/></li>
+				<li><b>DNI: </b><?php echo $datosEmpleado['DNI_EMP']; ?></li>
 				<li><b>E-mail: </b><?php echo $datosEmpleado['EMAIL_EMP']; ?></li>
-				<li><b>Fecha de Nacimiento: </b><input id="FECHA_NACIMIENTO_EMP" name="FECHA_NACIMIENTO_EMP" type="text" value="<?php echo getFechaFormateada($datosEmpleado['FECHA_NACIMIENTO_EMP']); ?>"/></li>
+				<li>
+					<b>Fecha de Nacimiento: </b><?php echo getFechaFormateada($datosEmpleado['FECHA_NACIMIENTO_EMP']);?>
+				</li>
 				<li><b>Teléfono: </b><input id="TELEFONO_EMP" name="TELEFONO_EMP" type="text" value="<?php echo $datosEmpleado['TELEFONO_EMP']; ?>"/></li>
-				<li><b>Contraseña: </b><input id="PASS_EMP" name="PASS_EMP" type="password" value="<?php echo $datosEmpleado['PASS_EMP']; ?>"/></li>
-				<li><b>Confirmar contraseña: </b><input id="CONF_PASS_EMP" name="CONF_PASS_EMP" type="password" value="<?php echo $datosEmpleado['PASS_EMP']; ?>"/></li>
+				
 			</ul>
 			
 			<?php }else{ ?>

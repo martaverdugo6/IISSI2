@@ -145,7 +145,7 @@ div.error{
 /*-------------------------------------------BOTONES---------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
 
-input.registrarse, input.botonEntrar, input.añadirProducto{
+input.registrarse, input.botonEntrar, input.añadirProducto, input.añadirOferta{
     background-color: gray;			/*Color del fondo del boton*/
     color: white;					/*Color de las letras*/
     padding: 12px 20px;				/*alto por ancho*/
@@ -154,7 +154,7 @@ input.registrarse, input.botonEntrar, input.añadirProducto{
     border-radius: 4px;				/*esquinas redondeadas*/
     cursor: pointer;
 }	
-input.registrarse:hover, input.botonEntrar:hover, input.cambiarPagina:hover, input.añadirProducto:hover{			/*Cuando está el ratón encima*/
+input.registrarse:hover, input.botonEntrar:hover, input.cambiarPagina:hover, input.añadirProducto:hover, input.añadirOferta:hover{			/*Cuando está el ratón encima*/
     background-color: #91989E;
 }
 
@@ -306,7 +306,7 @@ table img{							/*Botones de borrar y editar*//*Aquí se modifican también los
 	width: 30px; 
 	height: 30px;
 }
-.PrimeraLineaTablaProductos td{		/*Celdas de la tabla de PRECIO, DESCRIPCION Y PRECIO*/
+.PrimeraLineaTablaProductos td{		/*Celdas de la tabla de NOMBRE, DESCRIPCION Y PRECIO*/
 	/*padding-left: 5%;*/
 	width: 40%;
 	font-size: 26px;
@@ -328,7 +328,7 @@ table img{							/*Botones de borrar y editar*//*Aquí se modifican también los
 	text-decoration: none;
 	text-transform: uppercase;
 	padding: 5px;			/*separación entre el texto y el más de su izquierda*/
-	color: black;
+	color: green;
 	font-size: 110%
 }
 
@@ -336,16 +336,6 @@ table img{							/*Botones de borrar y editar*//*Aquí se modifican también los
 	padding-bottom: 3%;
 	padding-left: 2%
 }
-
-
-
-
-
-
-
-
-
-
 
 /*-----------------------------------------------------------------------------------------------------*/
 /*---------------------------------------CONSULTA OFERTAS----------------------------------------------*/
@@ -370,6 +360,41 @@ table img{							/*Botones de borrar y editar*//*Aquí se modifican también los
 	width: 30%;
 	font-size: 18px;
 }
+/*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------...--CONSULTA USUARIOS------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+.PrimeraLineaTablaUsuarios{		/*Tamaño de la tabla de NOMBRE, APELLIDO Y DNI*/
+	width: 90%;
+	padding-top: 3%;
+}
+.tablaUsuarios{					/*Tamaño de la tabla de los clientes*/
+	width: 100%;
+}
+.PrimeraLineaTablaUsuarios td{
+	padding-left: 10%;
+	width: 25%;
+	font-size: 26px;
+	border-bottom: 2px solid #ddd;
+}
+.tablaUsuarios td{
+	padding-left: 5%;
+	width: 35%;
+	font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-----------------------------------------------------------------------------------------------------*/
 /*---------------------------------------CUENTA USUARIO/EMPLEADO---------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
@@ -561,6 +586,24 @@ div.preguntasFrecuentes a:hover{
 #vueltaAtras{
 	padding: 1%;
 }
+/*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------CREAR OFERTA----------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+#nuevaOferta{				/*lista entera*/
+	list-style-type: none;
+}
+
+#nuevaOferta li{			/*cada fila*/
+	margin: 2%;
+}
+#nuevaOferta li p{		/*cada "titulo" */
+	font-size: 120%;
+}
+
+#nuevaOferta li label{	/*el check categoria*/
+	padding-right: 3%;		/*separar los checks entre si*/
+}
+
 
 /*-----------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------ACCION CREAR PROD-----------------------------------------*/
@@ -651,3 +694,25 @@ div.preguntasFrecuentes a:hover{
 		
 	}
 }
+/*-----------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------JScript---------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*Colores para la contraseña*/
+
+.strongpass {
+	background-color: green
+}
+
+.middlepass {
+	background-color: yellow
+}
+
+.weakpass {
+	background-color: red
+}
+
+.nanpass {
+	background-color: lightyellow
+}
+

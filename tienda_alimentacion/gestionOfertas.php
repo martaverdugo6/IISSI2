@@ -33,4 +33,31 @@ function modificar_descuento($conexion, $OID_oferta, $descuento){
 		return $e->getMessage();
     }
 }
+
+function crear_oferta($conexion, $oferta){
+	$fechaI = date('d/m/y', strtotime($oferta['FECHA_INICIO']));
+	$fechaF = date('d/m/y', strtotime($oferta['FECHA_FIN']));
+	try{
+		$consulta = "CALL INSERTAR_OFERTA(:des, :fechaI, :fechaF, :oid_pro)";
+		$stmt = $conexion -> prepare($consulta);
+		$stmt -> bindParam(':des', $oferta['descuento']);		//Lo que va detras de los dos puntos debe
+																//tener siempre el mismo nombre
+		$stmt -> bindParam(':fechaI', $fechaI);
+		$stmt -> bindParam(':fechaF', $fechaF);
+		$stmt -> bindParam(':oid_pro', $oferta['oid_pro']);
+		$stmt -> execute();
+		return true;
+	}catch(PDOException $oops){
+		//TODO //Solo para depurar, después quitar
+		echo $oops -> getMessage();
+		return false;
+	}
+}
+
+/*function OID_pro_en_oferta($conexion, ){
+	$query2 = "SELECT producto.nombre_pro FROM producto WHERE producto.oid_pro = ".$fila["OID_PRO"];
+	$stmt = $conexion -> prepare($query2);
+	$stmt->execute();
+	$nombreProducto = $stmt -> fetch(PDO:: FETCH_ASSOC);
+}*/
 ?>
