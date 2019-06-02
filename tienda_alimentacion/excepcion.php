@@ -20,12 +20,21 @@
 	<title>Ha ocurrido un error</title>
 </head>
 <body>
+	<script>
+		window.setInterval (BlinkIt, 500);
+		var color = "red";
+		function BlinkIt () {
+		var blink = document.getElementById ("vaya");
+		color = (color == "#ffffff")? "red" : "#ffffff";
+		blink.style.color = color;
+		blink.style.fontSize='36px';}
+	</script>
 
 <?php	
 	include_once("cabecera.php"); 
 ?>
 	<div class= text_except>
-		<h2>¡Vaya!</h2>
+		<div id="vaya"><h2>¡Vaya!</h2></div>
 		<?php if ($destino<>"") { ?>
 		<p>Ocurrió un problema durante el procesado de los datos. Pulse <a href="<?php echo $destino ?>">aquí</a> para volver a la página de la que procede.</p>
 		<?php } else { ?>
