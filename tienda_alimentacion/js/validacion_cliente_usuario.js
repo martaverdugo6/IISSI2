@@ -7,7 +7,7 @@ function validateForm() {
 	var error5 = passwordValidation();
 	var error6 = passwordConfirmation();
     
-	return (error1.length==0) && (error2.length==0) && (error3.length==0) && (error4.length==0)&& (error5.length==0) && (error6.length==0);
+	return (error1.length==0) && (error2.length==0) && (error3.length==0) && (error4.length==0) && (error5.length==0) && (error6.length==0);
 }
 
 function validacionNombre(){

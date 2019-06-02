@@ -223,6 +223,57 @@ input[type=number]{
 	cursor: pointer;				/*forma del ratón al pulsarlo*/
 }
 
+#editarDatosMiCuenta{
+	float: right;
+	margin-right: 3%;
+	margin-top: 3%;
+	background-color: #F9A935;
+	padding: 1%;
+	border-radius: 8px;
+}
+#editarDatosMiCuenta:hover{
+	float: right;
+	margin-right: 3%;
+	margin-top: 3%;
+	background-color: #EE9412;
+	padding: 1%;
+	border-radius: 8px;
+}
+
+#cancelarDatosMiCuenta{
+	float: right;
+	margin-right: 3%;
+	margin-top: 3%;
+	background-color: #FF2F2F;
+	padding: 1%;
+	border-radius: 8px; F11313
+}
+#cancelarDatosMiCuenta:hover{
+	float: right;
+	margin-right: 3%;
+	margin-top: 3%;
+	background-color: #F11313;
+	padding: 1%;
+	border-radius: 8px; 
+}
+
+#guardarDatosMiCuenta{
+	float: right;
+	margin-right: 3%;
+	margin-top: 3%;
+	background-color: #039DAD;
+	padding: 1%;
+	border-radius: 8px;
+}
+#guardarDatosMiCuenta:hover{
+	float: right;
+	margin-right: 3%;
+	margin-top: 3%;
+	background-color: #1C929E;
+	padding: 1%;
+	border-radius: 8px;
+}
+
 /*-----------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------LOGIN-----------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
@@ -331,6 +382,13 @@ table img{							/*Botones de borrar y editar*//*Aquí se modifican también los
 	color: green;
 	font-size: 110%
 }
+#enlace_crear_producto a:hover{
+	text-decoration: underline;
+	text-transform: uppercase;
+	padding: 5px;			/*separación entre el texto y el más de su izquierda*/
+	color: green;
+	font-size: 115%
+}
 
 #enlace_crear_producto{
 	padding-bottom: 3%;
@@ -402,7 +460,7 @@ table img{							/*Botones de borrar y editar*//*Aquí se modifican también los
 	list-style-type: none;			/*quitar puntos en los enlaces*/
 }
 #datosMiCuenta ul li{
-	font-size: 18px;
+	font-size: 110%;
 	padding: 22px;
 	padding-left: 20%;
 }
@@ -690,8 +748,14 @@ div.preguntasFrecuentes a:hover{
 		font-size: 110%;
 	}
 	div.informacion{
-		height: 100%;
+		height: 400px;
 		
+	}
+	div.redesSociales{
+		margin-top: 3%;
+	}
+	div.autora{
+		margin-top: 3%;
 	}
 }
 /*-----------------------------------------------------------------------------------------------------*/

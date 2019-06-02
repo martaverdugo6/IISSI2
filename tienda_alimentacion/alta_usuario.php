@@ -68,17 +68,17 @@
 				<ul class=datosUsuario>
 					<div>
 					<label for="nombre">Nombre:<em>*</em></label>
-					<input id="nombre" name="nombre" type="text" size="40" value="<?php echo $formulario['nombre'];?>" required/>
+					<input id="nombre" name="nombre" type="text" size="40" oninput="validacionNombre();" value="<?php echo $formulario['nombre'];?>" required/>
 					</div>
 
 					<div>
 					<label for="apellidos">Apellidos:<em>*</em></label>
-					<input id="apellidos" name="apellidos" type="text" size="50" value="<?php echo $formulario['apellidos'];?>" required/>
+					<input id="apellidos" name="apellidos" type="text" size="50" oninput="validacionApellidos();" value="<?php echo $formulario['apellidos'];?>" required/>
 					</div>
 
 					<div>
 					<label for="dni">DNI:<em>*</em></label>
-					<input id="dni" name="dni" type="text" placeholder="12345678Z" pattern="^[0-9]{8}[A-Z]" 	title="Ocho dígitos seguidos de una letra mayúscula" value="<?php echo $formulario['dni'];	?>" required/>
+					<input id="dni" name="dni" type="text" placeholder="12345678Z" pattern="^[0-9]{8}[A-Z]" 	title="Ocho dígitos seguidos de una letra mayúscula" oninput="validacionDni();" value="<?php echo $formulario['dni'];	?>" required/>
 					</div>
 
 					<div>
@@ -89,7 +89,7 @@
 					<div>
 					<label for="email">Email:<em>*</em></label>
 					<input id="email" name="email"  type="email" placeholder="usuario@dominio.extension" 
-										size="40" value="<?php echo $formulario['email'];?>" required/>
+										size="40" oninput="validacionEmail();" value="<?php echo $formulario['email'];?>" required/>
 					</div>
 
 					<div class="sexo">
@@ -106,18 +106,18 @@
 	
 					<div>
 					<label for="direccion">Dirección:</label>
-					<input id="direccion" name="direccion" type="text" size="40" value="<?php echo $formulario['direccion'];?>" required oninput="passwordValidation();"/>
+					<input id="direccion" name="direccion" type="text" size="40" value="<?php echo $formulario['direccion'];?>"/>
 					</div>
 
 					<div>
 					<label for="pass">Contraseña:<em>*</em></label>
-					<input id="pass" name="pass" type="password" size="50" placeholder="Mínimo 8 caracteres entre mayúsculas, minusculas y dígitos" oninput="passwordConfirmation();" required />
+					<input id="pass" name="pass" type="password" size="50" placeholder="Mínimo 8 caracteres entre mayúsculas, minusculas y dígitos" oninput="passwordValidation();" required />
 					</div>
 
 					<div>
 					<label for="confirmpass">Confirmar contraseña: <em>*</em></label>
 					<input id="confirmpass" name="confirmpass" type="password" size="40"
-									placeholder="Confirmación de contraseña" required />
+									placeholder="Confirmación de contraseña" required oninput="passwordConfirmation();"/>
 					</div>
 
 				</ul>

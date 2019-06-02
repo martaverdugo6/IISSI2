@@ -104,7 +104,8 @@ function modificar_usuarios($conexion,$usuario) {
 }
 
 function modificar_empleados($conexion,$usuario) {
-	//$fechaNacimiento = date('d/m/y', strtotime($usuario['fechaNacimiento']));
+	print_r($usuario);
+	die();
 	try {
 		$stmt=$conexion->prepare('CALL MODIFICAR_EMPLEADO(:nom, :ape, :dni, :fec, :sal, :ema, :tel, :pass, :oid)');
 		$stmt -> bindParam(':nom', $usuario['nombre']);		//Lo que va detras de los dos puntos debe tener siempre el mismo nombre

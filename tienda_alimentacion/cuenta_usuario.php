@@ -53,12 +53,12 @@
 
 		<div>
 			<?php if(isset($_SESSION['estoyEditandoUsuario'])){ ?>
-				<button id="editarDatosMiCuenta" name="guardar" type="submit" class="guardar_datos">
+				<button title="guardar datos" id="guardarDatosMiCuenta" name="guardar" type="submit" class="guardar_datos">
 					Guardar datos
 				</button>
-				<button id="editarDatosMiCuenta" name="cancelar" type="submit">Cancelar</button>
+				<button title="cancelar edición" id="cancelarDatosMiCuenta" name="cancelar" type="submit">Cancelar</button>
 			<?php }else{ ?>
-				<button id="editarDatosMiCuenta" name="editar" type="submit" class="editar_datos">
+				<button title="editar datos" id="editarDatosMiCuenta" name="editar" type="submit" class="editar_datos">
 					Editar datos personales
 				</button>
 			<?php } ?>

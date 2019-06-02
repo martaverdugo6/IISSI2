@@ -39,11 +39,7 @@
 				<td><div class="APELLIDOS_CLI"><?php echo $fila["APELLIDOS_CLI"]; ?></div></td>
 				<td><div class="NOMBRE_CLI"><?php echo $fila["NOMBRE_CLI"]; ?></div></td>
 				<td><div class="DNI_CLI"><?php echo $fila["DNI_CLI"]; ?></div></td>
-				<td>
-					<button title="Eliminar usuario" id="borrar" name="borrar" type="submit" class="editar_fila">
-						<img src="img/eliminar.png" class="editar_fila" alt="Borrar producto">
-					</button>
-				</td>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
 			</table>
 			<hr>
 		<?php } ?>

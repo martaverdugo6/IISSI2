@@ -15,8 +15,8 @@
 			<?php if(isset($_SESSION['datosUsuario'])){?>
 				<li><a href="cuenta_usuario.php"><i class="far fa-user-circle"></i>Mi cuenta</a></li>
 			<?php }else if(isset($_SESSION['datosEmpleado'])){ ?>
-				<li><a href="opciones_empleado.php"><i class="fas fa-cog"></i>Opciones</a></li>
 				<li><a href="cuenta_empleado.php"><i class="far fa-user-circle"></i>Mi cuenta</a></li>
+				<li><a href="consulta_usuarios.php"><i class="fas fa-users"></i>Usuarios</a></li>
 			<?php } ?>
 		<?php } ?>
 
