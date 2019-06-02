@@ -78,12 +78,12 @@
 
 					<div>
 					<label for="dni">DNI:<em>*</em></label>
-					<input id="dni" name="dni" type="text" placeholder="12345678Z" pattern="^[0-9]{8}[A-Z]" 	title="Ocho dígitos seguidos de una letra mayúscula" value="<?php echo $formulario['dni'];	?>" required>
+					<input id="dni" name="dni" type="text" placeholder="12345678Z" pattern="^[0-9]{8}[A-Z]" 	title="Ocho dígitos seguidos de una letra mayúscula" value="<?php echo $formulario['dni'];	?>" required/>
 					</div>
 
 					<div>
 					<label for="fechaNacimiento">Fecha de nacimiento:</label>
-					<input type="date" name="fechaNacimiento" id="fechaNacimiento" value="<?php echo $formulario['fechaNacimiento'];?>" required/>
+					<input type="date" name="fechaNacimiento" id="fechaNacimiento" value="<?php echo $formulario['fechaNacimiento'];?>"/>
 					</div>
 
 					<div>
@@ -101,7 +101,7 @@
 
 					<div>
 					<label for="telefono">Teléfono:</label>
-					<input id="telefono" name="telefono" type="text" size="40" value="<?php echo $formulario['telefono'];?>" required/>
+					<input id="telefono" name="telefono" type="text" size="40" value="<?php echo $formulario['telefono'];?>"/>
 					</div>
 	
 					<div>
@@ -115,7 +115,7 @@
 					</div>
 
 					<div>
-					<label for="confirmpass">Confirmar contraseña: </label>
+					<label for="confirmpass">Confirmar contraseña: <em>*</em></label>
 					<input id="confirmpass" name="confirmpass" type="password" size="40"
 									placeholder="Confirmación de contraseña" required />
 					</div>
