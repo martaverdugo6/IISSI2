@@ -34,11 +34,12 @@
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="img/logoVentana.png" />
 	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+	<script src="js/validacion_alta_producto.js" type="text/javascript"></script>
 	<title>Tienda de Alimentación: Crear producto</title>
 </head>
 <body>
 	<div id="vueltaAtras">
-		<i class="fas fa-angle-left"></i><a title="Volver atrás" href="opciones_empleado.php">Volver</a>
+		<i class="fas fa-angle-left"></i><a title="Volver atrás" href="consulta_productos.php">Volver</a>
 	</div>
 	<?php 
 	// Mostrar los erroes de validación (Si los hay)
@@ -49,33 +50,33 @@
 		echo "</div>";
 		}
 	?>
-<form id="crearProd" method="POST" action="validacion_crear_producto.php" novalidate>
+<form id="crearProd" method="POST" action="validacion_crear_producto.php" onsubmit="return validateProducto()">
 	<fieldset>
 		<legend>Nuevo producto</legend>
 		<ul id="nuevoProducto">
 			<li>
 				<p>Nombre:</p>
-				<input id="nombre" type="text" name="nombre" value="<?php echo $creandoProd['nombre'];?>" required/>
+				<input id="nombreProd" type="text" name="nombre" oninput="validacionNombreProducto();" value="<?php echo $creandoProd['nombre'];?>"/>
 			</li>
 			<li>
 				<p>Descripción:</p>
-				<input id="descripcion" type="text" name="descripcion" value="<?php echo $creandoProd['descripcion'];?>" required/>
+				<input id="descripcionProd" type="text" name="descripcion" value="<?php echo $creandoProd['descripcion'];?>"/>
 			</li>
 			<li>
 				<p>Stock:</p>
-				<input id="stock" type="text" name="stock" value="<?php echo $creandoProd['stock'];?>" required/>
+				<input id="idStockProd" type="text" name="stock"  oninput="validacionStock();" value="<?php echo $creandoProd['stock'];?>"/>
 			</li>
 			<li>
 				<p>Precio:</p>
-				<input id="precio" type="text" name="precio" value="<?php echo $creandoProd['precio'];?>" required/>
+				<input id="idPrecioProd" type="text" name="precio" oninput="validacionPrecioProducto();" value="<?php echo $creandoProd['precio'];?>"/>
 			</li>
 			<li>
 				<p>Categoria:</p>
-				<label><input name="categoria" type="radio" value="bebida" <?php if($creandoProd['categoria']=='bebida') echo ' checked ';?>/>Bebida</label>
-				<label><input name="categoria" type="radio" value="alcohol" <?php if($creandoProd['categoria']=='alcohol') echo ' checked ';?>/>Alcohol</label>
-				<label><input name="categoria" type="radio" value="congelado" <?php if($creandoProd['categoria']=='congelado') echo ' checked ';?>/>Congelado</label>
-				<label><input name="categoria" type="radio" value="confiteria" <?php if($creandoProd['categoria']=='confiteria') echo ' checked ';?>/>Confiteria</label>
-				<label><input name="categoria" type="radio" value="golosina" <?php if($creandoProd['categoria']=='golosina') echo ' checked ';?>/>Golosina</label>
+				<label><input id="idCategoria" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="bebida" <?php if($creandoProd['categoria']=='bebida') echo ' checked ';?>/>Bebida</label>
+				<label><input id="idCategoria" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="alcohol" <?php if($creandoProd['categoria']=='alcohol') echo ' checked ';?>/>Alcohol</label>
+				<label><input id="idCategoria" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="congelado" <?php if($creandoProd['categoria']=='congelado') echo ' checked ';?>/>Congelado</label>
+				<label><input id="idCategoria" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="confiteria" <?php if($creandoProd['categoria']=='confiteria') echo ' checked ';?>/>Confiteria</label>
+				<label><input id="idCategoria" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="golosina" <?php if($creandoProd['categoria']=='golosina') echo ' checked ';?>/>Golosina</label>
 			</li>
 			<li>
 				<input class="añadirProducto" type="submit" name="submit" value="Crear" />

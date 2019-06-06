@@ -57,7 +57,7 @@ function crear_producto($conexion, $producto){
 		return true;
 	}catch(PDOException $oops){
 		//TODO //Solo para depurar, después quitar
-		echo $oops -> getMessage();
+		//echo $oops -> getMessage();
 		return false;
 	}
 }

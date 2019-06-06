@@ -40,7 +40,7 @@
 		<h3>¿Cómo se realiza el pago de los pedidos?</h3>
 		<p>Los pedidos serán pagados al repartidor en el momento de la entrega. Dichos pagos podrán realizarse tanto con tarjeta como en efectivo.</p>
 		<h3>¿Es posible realizar un pedido sin estar registrado/a?</h3>
-		<p>No, es necesario registrarse para ello. Puede registrarse <a href="alta_usuario.php">aqui.</a></p>
+		<p>No, es necesario registrarse para ello.</p>
 		
 	</div>
 	<div class=datosContacto>

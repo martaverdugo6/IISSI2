@@ -37,11 +37,6 @@
 			$errores[] = "<p>El campo NOMBRE debe ser rellenado</p>";
 		}
 
-		// Validación de la descripción
-		if($nuevoProd['descripcion'] == ""  ){
-			$errores[] = "<p>El campo DESCRIPCIÓN debe ser rellenado</p>";
-		}
-
 		// Validación del stock
 		if($nuevoProd['stock'] == ""  ){
 			$errores[] = "<p>El campo STOCK debe ser rellenado</p>";

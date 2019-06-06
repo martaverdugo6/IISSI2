@@ -50,6 +50,7 @@
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="img/logoVentana.png" />
 	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+	<script src="js/validacion_descuento_oferta.js" type="text/javascript"></script>
 	<title>Tienda de Alimentación: Ofertas</title>
 </head>
 <body>
@@ -82,8 +83,8 @@
 			<tr>
 				<td>Nombre</td>
 				<td>Descuento</td>
-				<td>Fecha Inicio</td>
-				<td>Fecha Fin</td>
+				<td class="fec">Fecha Inicio</td>
+				<td class="fec">Fecha Fin</td>
 			</tr>
 		</table>
 
@@ -96,7 +97,7 @@
 				$nombreProducto = $stmt -> fetch(PDO:: FETCH_ASSOC);
 		?>
 		<article class="oferta">
-			<form method="post" action="controlador_oferta.php">
+			<form method="post" action="controlador_oferta.php" onsubmit="return validateDescuento()">
 				<div class="fila_ofert">
 					<table class="tablaOfertas">
 					<tr class="datos_ofertas">
@@ -108,7 +109,7 @@
 						<!--Editando descuento-->
 
 						<td><div class="nombrePro"><?php echo $nombreProducto["NOMBRE_PRO"]; ?></div></td>
-						<td><input class="DESCUENTO" name="DESCUENTO" type="text" value="<?php echo $fila["DESCUENTO"]; ?>"/>%</td>
+						<td><input id="idDescuento" class="DESCUENTO" name="DESCUENTO" type="text" oninput="validacionDescuento();" value="<?php echo $fila["DESCUENTO"]; ?>"/>%</td>
 						<td><div class="fechaInicio"><?php echo $fila["FECHA_INICIO"]; ?></div></td>
 						<td><div class="fechaFin"><?php echo $fila["FECHA_FIN"]; ?></div>
 

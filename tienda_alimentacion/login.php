@@ -40,6 +40,7 @@
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="img/logoVentana.png" />
 	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+	<script src="js/validacion_email_login.js" type="text/javascript"></script>
 	<title>Tienda de Alimentación: Login</title>
 </head>
 <body>
@@ -54,14 +55,14 @@
 		echo "</div>";
 	}
 	?>
-	<form action = "login.php" id="inicioSesion" method = "POST">
+	<form action = "login.php" id="inicioSesion" method = "POST" onsubmit="return validateEmailLogin()" >
 		<p><i>Los campos marcados con asterisco ( <em>*</em> ) son obligatorios </i></p>
 		
 		<fieldset><legend><h2>Inicio de sesión</h2></legend>
 		
 			<div>
 				<label for="email">Cuenta de acceso:<em>*</em></label>
-				<input type="email" name="email" id="idCuentaAcceso" placeholder="Introducir email"     size="50" required/>
+				<input type="email" name="email" id="idCuentaAcceso"  oninput="validacionEmailLogin()" placeholder="Introducir email" size="50" required/>
 			</div>
 			
 			<div>

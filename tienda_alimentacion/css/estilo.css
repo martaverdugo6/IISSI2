@@ -36,6 +36,10 @@ ul.menu li a:hover {				/*Cambios al pasar el ratón por encima*/
 ul.menu li i{						/*Iconos del menú*/
 	margin-right: 6px;
 }
+
+ul.menu .icon {
+  display: none;
+}
 /*-----------------------------------------------------------------------------------------------------*/
 /*---------------------------------------------PIE-----------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
@@ -688,13 +692,22 @@ div.preguntasFrecuentes a:hover{
 /*-------------------------------------------RESPONSIVE------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------*/
 
-@media screen and (max-width:700px) {		/*media-queries*/
-	ul.menu li{
-		float: none;
+@media screen and (max-width:1300px) {		/*media-queries*/
+	ul.menu li a{
 		display: block;
 	}
+	ul.menu a.icon2{			/*MENÚ*/
+		display: none;
+		font-size: 200%;
+	}
+  	ul.menu a.icon {
+    	float: right;
+    	display: block;
+    	font-size: 200%;
+  	}
+
 	ul.menu{
-		height: 100%;
+		height: auto;			
 	}
 	header h1{
 		font-size: 30px;
@@ -703,7 +716,7 @@ div.preguntasFrecuentes a:hover{
 	fieldset.atencionCliente img{
 		display: none;
 	}
-
+/*
 	#inicioSesion fieldset{	
 		width: 70%;
 		margin-left: 10%;
@@ -714,6 +727,21 @@ div.preguntasFrecuentes a:hover{
 	#idCuentaAcceso, #idContraseñaAcceso{
 		width: 100%;
 	}
+*/
+	.menu.responsive {
+		position: relative;
+	}
+  	.menu.responsive a.icon {
+    	/*position: absolute;*/
+    	right: 0;
+    	top: 0;
+  	}
+  	ul.menu.responsive a.icon2 {
+		float: left;
+		display: block;
+		text-align: left;
+  	}
+
 
 	div.sexo label{
 		display: block;
@@ -738,25 +766,121 @@ div.preguntasFrecuentes a:hover{
 	}
 
 }
+
 @media screen and (max-width:1300px) {
-	div.informacion fieldset{
+	div.informacion fieldset{				/*PIE*/
 		float: none;
 		margin-left: 25%;
 	}	
 	div.informacion fieldset h2{
 		overflow: hidden;
-		font-size: 110%;
+		font-size: 200%;		/*110*/
 	}
-	div.informacion{
-		height: 400px;
-		
+	div.informacion{			/*cuadro naranja*/
+		height: auto;	
 	}
-	div.redesSociales{
+	div.informacion a, div.informacion h1{
+		font-size: 200%;
+	}
+	div.informacion fieldset a:hover{
+		font-size: 240%;
+	}
+	div.redesSociales{			/*Parte de abajo del cuadro naranja*/
 		margin-top: 3%;
+		height: auto;
+	}
+
+	div.redesSociales img{
+		width: 8%;
+		height: 8%;
+	}
+	div.redesSociales p{
+		font-size: 200%;
 	}
 	div.autora{
 		margin-top: 3%;
 	}
+	div.autora p{
+		font-size: 150%;
+	}
+
+
+	#MiPerfilMiCuenta h1{					/*CUENTA*/
+		font-size: 250%;
+		height: auto;
+	}			
+
+
+	#mostrandoPaginacion{					/*PAGINACIÓN*/
+		display: inline;
+	}
+
+	#mostrandoPaginacion input{
+		display: inline;
+		width: auto;
+		height: auto;
+		font-size: 200%;
+	}
+	#mostrandoPaginacion p{
+		display: inline;
+		font-size: 200%;
+	}
+	#enlaces a, span{
+		display: inline;
+		font-size: 200%;
+	}
+
+
+	.PrimeraLineaTablaProductos td{				/*TABLA CONS. PROD.*/
+		font-size: 250%;
+	}		
+	.tablaProductos td{
+		font-size: 200%;
+	}	
+
+	.tablaProductos td div.precio_pro{			/*solo el precio se alinea en el centro*/
+		text-align: center;
+	}
+
+	.tablaProductos td input{
+		width: 80%;
+		font-size: 120%;
+		text-align: center;
+		margin-left: 5%;
+	}
+
+	.PrimeraLineaTablaOferta td{				/*TABLA CONS. OFERTAS*/
+		font-size: 250%;
+		padding-right: 10%;
+	}
+
+	.tablaOfertas td{
+		font-size: 200%;
+	}
+
+	.tablaOfertas td div.descuento{
+		text-align: center;
+	}
+	.tablaOfertas td div.fechaInicio, div.fechaFin{
+		padding-right: 0.;
+		width: 5%;
+	}
+
+	.tablaOfertas td input{
+		width: 35%;
+		font-size: 130%;
+		text-align: center;
+		margin-left: 10%;
+	}
+
+	#botones_fila td{
+		width: 20%;
+	}
+	table img{							
+		width: 40px; 
+		height: 40px;
+	}
+
 }
 /*-----------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------JScript---------------------------------------------------*/

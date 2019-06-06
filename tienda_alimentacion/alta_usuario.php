@@ -1,5 +1,5 @@
 <?php 
-
+	unset($_SESSION['errores']);
 	session_start();
 	
 	if (!isset($_SESSION['formulario'])) {
@@ -32,11 +32,11 @@
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="img/logoVentana.png" />
 	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
-	<script src="js/validacion_cliente_usuario.js" type="text/javascript"></script>
+	<script src="js/validacion_alta_usuario.js" type="text/javascript"></script>
 	<title>Tienda de Alimentación: alta usuario</title>
 </head>
 <body>
-    <script>
+    <!--<script>
 
 		$(document).ready(function() {
 
@@ -45,7 +45,7 @@
 			});
 
 		});
-	</script>
+	</script>-->
 	<?php
 		include_once("cabecera.php");
 		include_once("menu.php");

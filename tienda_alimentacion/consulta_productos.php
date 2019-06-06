@@ -77,6 +77,7 @@
 	<meta charset="utf-8">
 	<link rel="shortcut icon" href="img/logoVentana.png" />
 	<link rel="stylesheet" type="text/css" href="css/estilo.css" />
+	<script src="js/validacion_precio_producto.js" type="text/javascript"></script>
 	<title>Tienda de Alimentación: Productos</title>
 </head>
 <body>
@@ -93,13 +94,13 @@
 		</div>
 
 		<nav id="mostrandoPaginacion">
-			<form method="get" action="consulta_productos.php">
+			<form method="get" action="consulta_productos.php" >
 				<input id="PAG_NUM" name="PAG_NUM" type="hidden" value="<?php echo $pagina_seleccionada?>"/>
-				Mostrando 
+				<p>Mostrando</p> 
 				<input id="PAG_TAM" name="PAG_TAM" type="number" 
 					min="1" max="<?php echo $total_registros;?>" 
-					value="<?php echo $pag_tam?>" autofocus="autofocus" /> 
-					entradas de <?php echo $total_registros?>
+					value="<?php echo $pag_tam?>" autofocus="autofocus" /><p>
+					entradas de <?php echo $total_registros?></p>
 				<input class="cambiarPagina" type="submit" value="Cambiar">
 			</form>
 			<div id="enlaces">
@@ -115,9 +116,9 @@
 		
 		<?php if(isset($_SESSION["datosEmpleado"])){ ?>
 		
-			<div id="enlace_crear_producto">
+			<!--<div id="enlace_crear_producto">
 				<i class="fas fa-plus"></i><a title="Añadir nuevo producto" href="crear_producto.php"><b>añadir nuevo producto</b></a>
-			</div>
+			</div>-->
 		
 		<?php } ?>
 		
@@ -135,7 +136,7 @@
 		?>
 
 		<article class="productos">
-			<form method="post" action="controlador_producto.php">
+			<form method="post" action="controlador_producto.php" onsubmit="return validatePrecio()">
 				<div class="fila_prod">
 					<table class="tablaProductos">	
 					<tr class="datos_productos">
@@ -150,7 +151,7 @@
 						
 						<td><div class="descripcion"><i><?php echo $fila["DESCRIPCION"]; ?></i></div></td>
 						
-						<td><input class="PRECIO_PRO" name="PRECIO_PRO" type="text" value="<?php echo $fila["PRECIO_PRO"]; ?>"/>€</td>
+						<td><input id="idPrecio" class="PRECIO_PRO" name="PRECIO_PRO" type="text" oninput="validacionPrecio();" value="<?php echo $fila["PRECIO_PRO"]; ?>"/>€</td>
 					
 					<?php }	else { ?>
 						<!-- mostrando precio-->
