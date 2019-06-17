@@ -62,60 +62,60 @@
 	?>
 	<form id="altaUsuario" method="get" action="validacion_alta_usuario.php" onsubmit="return validateForm()">
 			<p><i>Los campos marcados con asterisco ( <em>*</em> ) son obligatorios </i></p>		
-			<fieldset>
+			<fieldset class="alta_usuario">
 				<legend><h2>Nuevo usuario</h2></legend>
 
 				<ul class=datosUsuario>
 					<div>
-					<label for="nombre">Nombre:<em>*</em></label>
+					<label for="nombre"><p>Nombre:<em>*</em></p></label>
 					<input id="nombre" name="nombre" type="text" size="40" oninput="validacionNombre();" value="<?php echo $formulario['nombre'];?>" required/>
 					</div>
 
 					<div>
-					<label for="apellidos">Apellidos:<em>*</em></label>
+					<label for="apellidos"><p>Apellidos:<em>*</em></p></label>
 					<input id="apellidos" name="apellidos" type="text" size="50" oninput="validacionApellidos();" value="<?php echo $formulario['apellidos'];?>" required/>
 					</div>
 
 					<div>
-					<label for="dni">DNI:<em>*</em></label>
+					<label for="dni"><p>DNI:<em>*</em></p></label>
 					<input id="dni" name="dni" type="text" placeholder="12345678Z" pattern="^[0-9]{8}[A-Z]" 	title="Ocho dígitos seguidos de una letra mayúscula" oninput="validacionDni();" value="<?php echo $formulario['dni'];	?>" required/>
 					</div>
 
 					<div>
-					<label for="fechaNacimiento">Fecha de nacimiento:</label>
+					<label for="fechaNacimiento"><p>Fecha de nacimiento:</p></label>
 					<input type="date" name="fechaNacimiento" id="fechaNacimiento" value="<?php echo $formulario['fechaNacimiento'];?>"/>
 					</div>
 
 					<div>
-					<label for="email">Email:<em>*</em></label>
+					<label for="email"><p>Email:<em>*</em></p></label>
 					<input id="email" name="email"  type="email" placeholder="usuario@dominio.extension" 
 										size="40" oninput="validacionEmail();" value="<?php echo $formulario['email'];?>" required/>
 					</div>
 
 					<div class="sexo">
-					<label>Sexo:</label>
-					<label><input name="sexo" type="radio" value="Femenino" <?php if($formulario['sexo']=='Femenino') echo ' checked ';?>/>Femenino</label>
-					<label><input name="sexo" type="radio" value="Masculino" <?php if($formulario['sexo']=='Masculino') echo ' checked ';?>/>Masculino</label>
-					<label><input name="sexo" type="radio" value="Sin especificar" <?php if($formulario['sexo']=='Sin especificar') echo ' checked ';?>/>Sin especificar</label>
+					<label><p>Sexo:</p></label>
+					<label><p><input name="sexo" type="radio" value="Femenino" <?php if($formulario['sexo']=='Femenino') echo ' checked ';?>/>Femenino</p></label>
+					<label><p><input name="sexo" type="radio" value="Masculino" <?php if($formulario['sexo']=='Masculino') echo ' checked ';?>/>Masculino</p></label>
+					<label><p><input name="sexo" type="radio" value="Sin especificar" <?php if($formulario['sexo']=='Sin especificar') echo ' checked ';?>/>Sin especificar</p></label>
 					</div>
 
 					<div>
-					<label for="telefono">Teléfono:</label>
+					<label for="telefono"><p>Teléfono:</p></label>
 					<input id="telefono" name="telefono" type="text" size="40" value="<?php echo $formulario['telefono'];?>"/>
 					</div>
 	
 					<div>
-					<label for="direccion">Dirección:</label>
+					<label for="direccion"><p>Dirección:</p></label>
 					<input id="direccion" name="direccion" type="text" size="40" value="<?php echo $formulario['direccion'];?>"/>
 					</div>
 
 					<div>
-					<label for="pass">Contraseña:<em>*</em></label>
+					<label for="pass"><p>Contraseña:<em>*</em></p></label>
 					<input id="pass" name="pass" type="password" size="50" placeholder="Mínimo 8 caracteres entre mayúsculas, minusculas y dígitos" oninput="passwordValidation();" required />
 					</div>
 
 					<div>
-					<label for="confirmpass">Confirmar contraseña: <em>*</em></label>
+					<label for="confirmpass"><p>Confirmar contraseña: <em>*</em></p></label>
 					<input id="confirmpass" name="confirmpass" type="password" size="40"
 									placeholder="Confirmación de contraseña" required oninput="passwordConfirmation();"/>
 					</div>

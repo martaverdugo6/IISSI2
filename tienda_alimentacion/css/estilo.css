@@ -291,8 +291,8 @@ input[type=number]{
 
 #inicioSesion fieldset{				/*Edita el cuadro entero*/
 	border-style: dashed; 			/*border del cuadrado de lineas discontinuas*/
-	width: 50%;						/*Ocupa el 50%*/
-	margin-left: 25%;				/*Deja un 25% a la izquierda*/
+	width: 40%;						/*Ocupa el 50%*/
+	margin-left: 30%;				/*Deja un 25% a la izquierda*/
 	height: 500px;
 }
 
@@ -693,64 +693,53 @@ div.preguntasFrecuentes a:hover{
 /*-----------------------------------------------------------------------------------------------------*/
 
 @media screen and (max-width:1300px) {		/*media-queries*/
-	ul.menu li a{
-		display: block;
-	}
-	ul.menu a.icon2{			/*MENÚ*/
+				
+									/*MENÚ*/
+	ul.menu a.icon2{				
 		display: none;
-		font-size: 200%;
+		font-size: 250%;
 	}
   	ul.menu a.icon {
     	float: right;
     	display: block;
-    	font-size: 200%;
+    	font-size: 250%;
   	}
-
 	ul.menu{
-		height: auto;			
+		height: auto;	
 	}
-	header h1{
-		font-size: 30px;
-	}
-	
-	fieldset.atencionCliente img{
-		display: none;
-	}
-/*
-	#inicioSesion fieldset{	
-		width: 70%;
-		margin-left: 10%;
-	}
-	#inicioSesion div{
-		width: 40%;
-	}
-	#idCuentaAcceso, #idContraseñaAcceso{
-		width: 100%;
-	}
-*/
-	.menu.responsive {
+
+	/*.menu.responsive {
 		position: relative;
-	}
+	}*/
   	.menu.responsive a.icon {
-    	/*position: absolute;*/
-    	right: 0;
-    	top: 0;
+    	display: block;
   	}
-  	ul.menu.responsive a.icon2 {
-		float: left;
+  	.menu.responsive li{
+  		display: block;
+  	}
+  	.menu.responsive a.icon2 {
+		/*float: left;*/
 		display: block;
-		text-align: left;
+		/*text-align: left;*/
   	}
-
-
-	div.sexo label{
+  										/*ALTA USUARIO*/
+  	#altaUsuario p{
+  		font-size: 160%;
+  	}
+  	#altaUsuario{
+  		margin-left: 17%;
+  	}
+  	fieldset.alta_usuario input{
+  		height: 4%;
+  		font-size: 160%;
+  	}
+  	fieldset.alta_usuario legend{
+  		font-size: 170%;
+  	}
+	div.sexo label{							
 		display: block;
 		position: relative;
-	}
-}
-
-@media screen and (max-width:800px) {			/*El alta usuario se va a modificar cuando sea un poco más grande que el resto de elementos de la página*/
-
+	}	
 	#altaUsuario fieldset{
 		width: 65%;
 		margin-left: 0px;
@@ -765,16 +754,44 @@ div.preguntasFrecuentes a:hover{
 		width: 100%;
 	}
 
-}
+											/*LOGIN*/
+	#inicioSesion fieldset{
+		width: 65%;
+		height: auto;
+		margin-left: 0px;
+		padding-left:0px;
+		margin-bottom: 10%;
+	}
+	#inicioSesion{
+  		margin-left: 20%;
+  	}	
+	#inicioSesion p{
+		font-size: 170%;
+	}
+	#inicioSesion legend{
+		font-size: 170%;
+	}
+	#inicioSesion input.cuentaAcceso, input.passAcceso{
+		height: 4%;
+  		font-size: 160%;
+  		width: 70%;
+  		margin-left: 5%;
+	}
+	input.botonEntrar{
+		font-size: 160%;
+	}
+	#inicioSesion a{
+		font-size: 160%;
+		display: block;
+	}
 
-@media screen and (max-width:1300px) {
 	div.informacion fieldset{				/*PIE*/
 		float: none;
 		margin-left: 25%;
 	}	
 	div.informacion fieldset h2{
 		overflow: hidden;
-		font-size: 200%;		/*110*/
+		font-size: 200%;
 	}
 	div.informacion{			/*cuadro naranja*/
 		height: auto;	
@@ -784,6 +801,10 @@ div.preguntasFrecuentes a:hover{
 	}
 	div.informacion fieldset a:hover{
 		font-size: 240%;
+	}
+
+	fieldset.atencionCliente img{
+		display: none;
 	}
 	div.redesSociales{			/*Parte de abajo del cuadro naranja*/
 		margin-top: 3%;
@@ -880,6 +901,30 @@ div.preguntasFrecuentes a:hover{
 		width: 40px; 
 		height: 40px;
 	}
+
+											/*TABLA USUARIOS*/
+
+	.PrimeraLineaTablaUsuarios td{
+		font-size: 250%;
+	}										
+	.tablaUsuarios td{
+		font-size: 200%;
+	}
+	.tablaUsuarios td div.NOMBRE_CLI, div.DNI_CLI{
+		padding-left: 45%
+	}
+
+
+											/*EXCEPCIÓN*/
+	div.text_except p{
+		font-size: 350%;
+	}
+	div.excepcion{
+		font-size: 250%;
+	}
+
+
+
 
 }
 /*-----------------------------------------------------------------------------------------------------*/

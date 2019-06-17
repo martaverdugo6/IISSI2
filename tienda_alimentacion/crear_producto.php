@@ -72,11 +72,11 @@
 			</li>
 			<li>
 				<p>Categoria:</p>
-				<label><input id="idCategoria" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="bebida" <?php if($creandoProd['categoria']=='bebida') echo ' checked ';?>/>Bebida</label>
-				<label><input id="idCategoria" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="alcohol" <?php if($creandoProd['categoria']=='alcohol') echo ' checked ';?>/>Alcohol</label>
-				<label><input id="idCategoria" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="congelado" <?php if($creandoProd['categoria']=='congelado') echo ' checked ';?>/>Congelado</label>
-				<label><input id="idCategoria" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="confiteria" <?php if($creandoProd['categoria']=='confiteria') echo ' checked ';?>/>Confiteria</label>
-				<label><input id="idCategoria" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="golosina" <?php if($creandoProd['categoria']=='golosina') echo ' checked ';?>/>Golosina</label>
+				<label><input id="idBebida" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="bebida" <?php if($creandoProd['categoria']=='bebida') echo ' checked ';?>/>Bebida</label>
+				<label><input id="idAlcohol" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="alcohol" <?php if($creandoProd['categoria']=='alcohol') echo ' checked ';?>/>Alcohol</label>
+				<label><input id="idCongelado" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="congelado" <?php if($creandoProd['categoria']=='congelado') echo ' checked ';?>/>Congelado</label>
+				<label><input id="idConfiteria" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="confiteria" <?php if($creandoProd['categoria']=='confiteria') echo ' checked ';?>/>Confiteria</label>
+				<label><input id="idGolosina" name="categoria" type="radio" oninput="validacionCategoriaProducto();" value="golosina" <?php if($creandoProd['categoria']=='golosina') echo ' checked ';?>/>Golosina</label>
 			</li>
 			<li>
 				<input class="añadirProducto" type="submit" name="submit" value="Crear" />

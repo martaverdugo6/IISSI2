@@ -58,16 +58,17 @@
 	<form action = "login.php" id="inicioSesion" method = "POST" onsubmit="return validateEmailLogin()" >
 		<p><i>Los campos marcados con asterisco ( <em>*</em> ) son obligatorios </i></p>
 		
-		<fieldset><legend><h2>Inicio de sesión</h2></legend>
+		<fieldset>
+			<legend><h2>Inicio de sesión</h2></legend>
 		
 			<div>
-				<label for="email">Cuenta de acceso:<em>*</em></label>
-				<input type="email" name="email" id="idCuentaAcceso"  oninput="validacionEmailLogin()" placeholder="Introducir email" size="50" required/>
+				<label for="email"><p>Cuenta de acceso:<em>*</em></p></label>
+				<input class="cuentaAcceso" type="email" name="email" id="idCuentaAcceso"  oninput="validacionEmailLogin()" placeholder="Introducir email" size="50" required/>
 			</div>
 			
 			<div>
-				<label for="contraseña">Contraseña:<em>*</em></label>
-				<input type="password" name="pass" id="idContraseñaAcceso" placeholder="Mínimo 8 caracteres" size="50" required/>
+				<label for="contraseña"><p>Contraseña:<em>*</em></p></label>
+				<input class="passAcceso" type="password" name="pass" id="idContraseñaAcceso" placeholder="Mínimo 8 caracteres" size="50" required/>
 			</div>
 			
 			<div class="entrar">

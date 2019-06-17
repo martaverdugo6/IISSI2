@@ -59,10 +59,17 @@ function validacionPrecioProducto(){
 
 function validacionCategoriaProducto(){
 
-	var categoria = document.getElementById("idCategoria");
-	var valorCategoria = categoria.value;
-	var valido = true;
-	valido = valido && (valorCategoria.length>0);
+	var bebida = document.getElementById("idBebida");
+	var alcohol = document.getElementById("idAlcohol");
+	var congelado = document.getElementById("idCongelado");
+	var confiteria = document.getElementById("idConfiteria");
+	var golosina = document.getElementById("idGolosina");
+	if( !bebida.checked || !alcohol.checked || !congelado.checked || !confiteria.checked || !golosina.checked){
+  		valido = false;
+	}
+	//var valorCategoria = categoria.value;
+	//var valido = true;
+	//valido = valido && (valorCategoria.length>0);
 	if(!valido){
 		var error = "Introduzca la categoria del producto";
 	}else{
