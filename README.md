@@ -1,2 +1,3 @@
-Proyecto de Tienda de alimentacion para la asignatura IISSI2. 
+# TIENDA DE ALIMENTACIÓN
+ 
 Está creado en php y sin ningún framework.
